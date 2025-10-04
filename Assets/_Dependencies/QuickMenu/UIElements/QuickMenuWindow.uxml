@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="QuickMenuItem" src="project://database/Assets/QuickMenu/UIElements/QuickMenuItem.uxml?fileID=9197481963319205126&amp;guid=461cbfab6b8bfed4a93ba5b0f5ab6de7&amp;type=3#QuickMenuItem" />
+    <Style src="project://database/Assets/QuickMenu/UIElements/QuickMenuWindow.uss?fileID=7433441132597879392&amp;guid=f7849855cd589ef4a8efe3fbeb809abf&amp;type=3#QuickMenuWindow" />
+    <ui:VisualElement name="Container">
+        <ui:VisualElement name="SearchArea">
+            <ui:VisualElement name="SearchFieldContainer">
+                <ui:TextField name="SearchField" />
+                <ui:Label name="SearchFieldPlaceholder" text=" Search" picking-mode="Ignore" style="color: rgba(255, 255, 255, 0.4);" />
+            </ui:VisualElement>
+            <ui:ScrollView name="SearchResults" />
+        </ui:VisualElement>
+        <ui:VisualElement name="ItemParametersArea">
+            <ui:Instance template="QuickMenuItem" name="ItemHeader" />
+            <ui:Label text="Paramaters" name="ItemParametersTitle" />
+            <ui:ScrollView name="ItemParameters" />
+            <ui:VisualElement name="ItemFooter">
+                <ui:Button text="Apply" name="ItemButtonApply" />
+                <ui:Button text="Cancel" name="ItemButtonCancel" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

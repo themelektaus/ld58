@@ -1,0 +1,205 @@
+#Container
+{
+	padding: 10px;
+	background-color: #2a2a2a;
+	/* border-radius: 5px; */
+	border-color: #111;
+	border-width: .5px;
+	flex-grow: 1;
+}
+
+#SearchFieldContainer
+{
+	margin: 0;
+	font-size: 14px;
+}
+
+#SearchFieldPlaceholder
+{
+	position: absolute;
+	top: 8px;
+	left: 9px;
+	color: rgba(255, 255, 255, .6);
+}
+
+#SearchField
+{
+	margin: 0;
+}
+
+#SearchField #unity-text-input
+{
+	margin: 0;
+	padding: 7px 9.5px 6.5px;
+	background-color: #222;
+	border-width: .5px;
+	border-color: black;
+	border-radius: 0;
+}
+
+#SearchField #unity-text-input:focus
+{
+	border-color: #666;
+}
+
+#SearchResults
+{
+	flex-grow: 1;
+	margin: 5px 0 0;
+}
+
+#SearchResults #Item.last
+{
+	margin: 0 5px 0 0;
+}
+
+
+
+#Item
+{
+	border-width: 0.5px;
+	margin: 0 5px 5px 0;
+	padding: 8px 7px 7px;
+}
+
+#ItemCategory,
+#ItemSubCategory
+{
+	background-color: rgba(255, 255, 255, .6);
+	color: black;
+	-unity-font-style: bold;
+	-unity-text-align: middle-center;
+	font-size: 11px;
+	padding: 3px 7px;
+	border-radius: 2px;
+	margin: 0 5px 0 0;
+	min-width: 20px;
+}
+
+#ItemCategory.with-sub-category
+{
+	margin-right: 0;
+	padding-right: 5px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+#ItemSubCategory
+{
+	display: none;
+}
+
+#ItemSubCategory.with-category
+{
+	display: flex;
+	padding-left: 5px;
+	padding-right: 6px;
+	margin-left: 0;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+#ItemTitle
+{
+	-unity-font-style: bold;
+	font-size: 14px;
+	-unity-text-align: middle-left;
+}
+
+#ItemDescription
+{
+	margin: 5px 0 0;
+}
+
+
+
+#ItemHeader
+{
+	margin: 10px 0;
+}
+
+#ItemParametersArea {
+	flex-grow: 1;
+}
+
+#ItemParameters {
+	flex-grow: 1;
+	border-width: 0.5px;
+	margin: 0 5px 5px 0;
+	padding: 8px 7px 7px;
+}
+
+#ItemParametersTitle {
+	-unity-font-style: bold;
+	font-size: 14px;
+	margin: 10px 10px 0 5px;
+	padding: 0 5px 3px 5px;
+	color: rgb(185, 185, 185);
+	border-bottom-width: .5px;
+	border-bottom-color: rgb(75, 75, 75);
+}
+
+#ItemParameter
+{
+	margin: 3px 5px;
+	height: 25px;
+	width: 90%;
+}
+
+#ItemParameter Label
+{
+	width: 130px;
+	min-width: 130px;
+	margin: 0 5px 3px 0;
+	-unity-text-align: middle-right;
+}
+
+#ItemParameter TextInput,
+#ItemParameter IntegerInput,
+#ItemParameter FloatInput
+{
+	min-width: auto;
+	background-color: rgba(0, 0, 0, .25);
+	padding: 0 5px;
+}
+
+#ItemParameter IntegerInput
+{
+	color: yellow;
+}
+
+#ItemParameter FloatInput
+{
+	color: orange;
+}
+
+#ItemFooter {
+	flex-direction: row;
+	justify-content: flex-end;
+	padding: 7px;
+	margin: -10px;
+	background-color: rgba(0, 0, 0, .2);
+}
+
+#ItemFooter Button {
+	margin: 0 0 0 3px;
+	padding: 5px 0 6px;
+	border-width: .5px;
+	width: 65px;
+}
+
+#ItemButtonApply {
+	background-color: rgb(55, 65, 85);
+}
+
+#ItemButtonApply:hover {
+	background-color: rgb(55, 105, 145);
+}
+
+#ItemButtonCancel {
+	background-color: rgb(65, 55, 45);
+}
+
+#ItemButtonCancel:hover {
+	background-color: rgb(85, 65, 45);
+}

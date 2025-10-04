@@ -1,0 +1,591 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1edc947b884bb37439ea0aa2b4baee52, type: 3}
+  m_Name: Quick Menu Execution - GameObject
+  m_EditorClassIdentifier: 
+  active: 1
+  visible: 1
+  menuItems:
+  - visible: 1
+    category: 
+    subCategory: 
+    title: Properties
+    description: 
+    path: GameObject/Properties...
+    requiresTransform: 1
+  - visible: 0
+    category: 
+    subCategory: 
+    title: Set as first Sibling
+    description: 
+    path: GameObject/Set as first sibling
+    requiresTransform: 1
+  - visible: 0
+    category: 
+    subCategory: 
+    title: Set as last Sibling
+    description: 
+    path: GameObject/Set as last sibling
+    requiresTransform: 1
+  - visible: 1
+    category: 
+    subCategory: 
+    title: Move To View
+    description: 
+    path: GameObject/Move To View
+    requiresTransform: 1
+  - visible: 1
+    category: 
+    subCategory: 
+    title: Align With View
+    description: 
+    path: GameObject/Align With View
+    requiresTransform: 1
+  - visible: 1
+    category: 
+    subCategory: 
+    title: Align View to Selected
+    description: 
+    path: GameObject/Align View to Selected
+    requiresTransform: 1
+  - visible: 0
+    category: 
+    subCategory: 
+    title: Toggle Active State
+    description: 
+    path: GameObject/Toggle Active State
+    requiresTransform: 1
+  - visible: 1
+    category: Create
+    subCategory: 
+    title: Empty
+    description: 
+    path: GameObject/Create Empty
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 
+    title: Empty Parent
+    description: 
+    path: GameObject/Create Empty Parent
+    requiresTransform: 1
+  - visible: 1
+    category: Create
+    subCategory: Sprite
+    title: Square
+    description: 
+    path: GameObject/2D Object/Sprites/Square
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: Sprite
+    title: Circle
+    description: 
+    path: GameObject/2D Object/Sprites/Circle
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: Sprite
+    title: Capsule
+    description: 
+    path: GameObject/2D Object/Sprites/Capsule
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: Sprite
+    title: Isometric Diamond
+    description: 
+    path: GameObject/2D Object/Sprites/Isometric Diamond
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: Sprite
+    title: Hexagon Flat-Top
+    description: 
+    path: GameObject/2D Object/Sprites/Hexagon Flat-Top
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: Sprite
+    title: Hexagon Pointed-Top
+    description: 
+    path: GameObject/2D Object/Sprites/Hexagon Pointed-Top
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: Sprite
+    title: 9-Sliced
+    description: 
+    path: GameObject/2D Object/Sprites/9-Sliced
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 2D
+    title: Static Sprite
+    description: 
+    path: GameObject/2D Object/Physics/Static Sprite
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 2D
+    title: Dynamic Sprite
+    description: 
+    path: GameObject/2D Object/Physics/Dynamic Sprite
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: Tilemap
+    title: Rectangular
+    description: 
+    path: GameObject/2D Object/Tilemap/Rectangular
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Tilemap
+    title: Hexagon - Flat-Top
+    description: 
+    path: GameObject/2D Object/Tilemap/Hexagon - Flat-Top
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Tilemap
+    title: Hexagon - Pointed-Top
+    description: 
+    path: GameObject/2D Object/Tilemap/Hexagon - Pointed-Top
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Tilemap
+    title: Isometric
+    description: 
+    path: GameObject/2D Object/Tilemap/Isometric
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Tilemap
+    title: Isometric Z as Y
+    description: 
+    path: GameObject/2D Object/Tilemap/Isometric Z as Y
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Sprite
+    title: Open Shape
+    description: 
+    path: GameObject/2D Object/Sprite Shape/Open Shape
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Sprite
+    title: Closed Shape
+    description: 
+    path: GameObject/2D Object/Sprite Shape/Closed Shape
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 2D
+    title: Pixel Perfect Camera
+    description: 
+    path: GameObject/2D Object/Pixel Perfect Camera
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 2D
+    title: Sprite Mask
+    description: 
+    path: GameObject/2D Object/Sprite Mask
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 3D
+    title: Cube
+    description: 
+    path: GameObject/3D Object/Cube
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 3D
+    title: Sphere
+    description: 
+    path: GameObject/3D Object/Sphere
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 3D
+    title: Capsule
+    description: 
+    path: GameObject/3D Object/Capsule
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 3D
+    title: Cylinder
+    description: 
+    path: GameObject/3D Object/Cylinder
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 3D
+    title: Plane
+    description: 
+    path: GameObject/3D Object/Plane
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 3D
+    title: Quad
+    description: 
+    path: GameObject/3D Object/Quad
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 3D
+    title: Text (TMP)
+    description: 
+    path: GameObject/3D Object/Text - TextMeshPro
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 3D
+    title: Text Mesh
+    description: 
+    path: GameObject/3D Object/Legacy/TextMesh
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 3D
+    title: Post-process Volume
+    description: 
+    path: GameObject/3D Object/Post-process Volume
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 3D
+    title: Ragdoll
+    description: 
+    path: GameObject/3D Object/Ragdoll...
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 3D
+    title: Terrain
+    description: 
+    path: GameObject/3D Object/Terrain
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 3D
+    title: Tree
+    description: 
+    path: GameObject/3D Object/Tree
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 3D
+    title: Wind Zone
+    description: 
+    path: GameObject/3D Object/Wind Zone
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: FX
+    title: Particle System
+    description: 
+    path: GameObject/Effects/Particle System
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: FX
+    title: Particle System Force Field
+    description: 
+    path: GameObject/Effects/Particle System Force Field
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: FX
+    title: Trail
+    description: 
+    path: GameObject/Effects/Trail
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: FX
+    title: Line
+    description: 
+    path: GameObject/Effects/Line
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: Light
+    title: Directional Light
+    description: 
+    path: GameObject/Light/Directional Light
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: Light
+    title: Point Light
+    description: 
+    path: GameObject/Light/Point Light
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: Light
+    title: Spotlight
+    description: 
+    path: GameObject/Light/Spotlight
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Light
+    title: Area Light
+    description: 
+    path: GameObject/Light/Area Light
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: Light
+    title: Reflection Probe
+    description: 
+    path: GameObject/Light/Reflection Probe
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Light
+    title: Light Probe Group
+    description: 
+    path: GameObject/Light/Light Probe Group
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: Audio
+    title: Audio Source
+    description: 
+    path: GameObject/Audio/Audio Source
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Audio
+    title: Audio Reverb Zone
+    description: 
+    path: GameObject/Audio/Audio Reverb Zone
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Video
+    title: Video Player
+    description: 
+    path: GameObject/Video/Video Player
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: UI
+    title: Image
+    description: 
+    path: GameObject/UI/Image
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: UI
+    title: Text (TMP)
+    description: 
+    path: GameObject/UI/Text - TextMeshPro
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: UI
+    title: Raw Image
+    description: 
+    path: GameObject/UI/Raw Image
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: UI
+    title: Panel
+    description: 
+    path: GameObject/UI/Panel
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: UI
+    title: Toggle
+    description: 
+    path: GameObject/UI/Toggle
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: UI
+    title: Slider
+    description: 
+    path: GameObject/UI/Slider
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: UI
+    title: Scrollbar
+    description: 
+    path: GameObject/UI/Scrollbar
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: UI
+    title: Scroll View
+    description: 
+    path: GameObject/UI/Scroll View
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: UI
+    title: Button (TMP)
+    description: 
+    path: GameObject/UI/Button - TextMeshPro
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: UI
+    title: Dropdown (TMP)
+    description: 
+    path: GameObject/UI/Dropdown - TextMeshPro
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: UI
+    title: Input Field (TMP)
+    description: 
+    path: GameObject/UI/Input Field - TextMeshPro
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: UI
+    title: Canvas
+    description: 
+    path: GameObject/UI/Canvas
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: UI
+    title: Event System
+    description: 
+    path: GameObject/UI/Event System
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: UI
+    title: Text
+    description: 
+    path: GameObject/UI/Legacy/Text
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: UI
+    title: Button
+    description: 
+    path: GameObject/UI/Legacy/Button
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: UI
+    title: Dropdown
+    description: 
+    path: GameObject/UI/Legacy/Dropdown
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: UI
+    title: Input Field
+    description: 
+    path: GameObject/UI/Legacy/Input Field
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: UI Toolkit
+    title: UI Document
+    description: 
+    path: GameObject/UI Toolkit/UI Document
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Cinemachine
+    title: Virtual Camera
+    description: 
+    path: GameObject/Cinemachine/Virtual Camera
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Cinemachine
+    title: FreeLook Camera
+    description: 
+    path: GameObject/Cinemachine/FreeLook Camera
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Cinemachine
+    title: Blend List Camera
+    description: 
+    path: GameObject/Cinemachine/Blend List Camera
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Cinemachine
+    title: State-Driven Camera
+    description: 
+    path: GameObject/Cinemachine/State-Driven Camera
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Cinemachine
+    title: ClearShot Camera
+    description: 
+    path: GameObject/Cinemachine/ClearShot Camera
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Cinemachine
+    title: Dolly Camera with Track
+    description: 
+    path: GameObject/Cinemachine/Dolly Camera with Track
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Cinemachine
+    title: Dolly Track with Cart
+    description: 
+    path: GameObject/Cinemachine/Dolly Track with Cart
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Cinemachine
+    title: Target Group Camera
+    description: 
+    path: GameObject/Cinemachine/Target Group Camera
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Cinemachine
+    title: Mixing Camera
+    description: 
+    path: GameObject/Cinemachine/Mixing Camera
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Cinemachine
+    title: 2D Camera
+    description: 
+    path: GameObject/Cinemachine/2D Camera
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 
+    title: Camera
+    description: 
+    path: GameObject/Camera
+    requiresTransform: 0

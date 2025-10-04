@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b743ebff9521134d921717d3d73af4c, type: 3}
+  m_Name: LD58_Global
+  m_EditorClassIdentifier: 
+  gameStateMachineQuery: {fileID: 11400000, guid: 9253ee5f974db0549aa29a2e44142d74, type: 2}
+  framerateQuery: {fileID: 11400000, guid: e9941f2de02da57428ff834cf0a58e6d, type: 2}
+  mainCameraQuery: {fileID: 11400000, guid: c23e0220de8213742b73af416886b83b, type: 2}
+  uiCameraQuery: {fileID: 11400000, guid: 66906a46bdd9c024cbeee11695ce5fa0, type: 2}
+  singletons:
+    mainCamera: {fileID: 728356337662469334, guid: 6fb4a0e12df1b354ea4ebc880c5b39f9, type: 3}
+    uiCamera: {fileID: 9165556441548074591, guid: 72887f567b152ca4c8071598b9f69b14, type: 3}
+    eventSystem: {fileID: 2644562674863255428, guid: 04b2c666f8fe1514697dc243fd4bb30c, type: 3}
+    gameStateMachine: {fileID: 6552470851627567931, guid: 06e30dbd6753cda439d56e04fee8e415, type: 3}
+    framerate: {fileID: 8009155746848446687, guid: 6f8923da8fa870e48be9087179c057bc, type: 3}
+    postProcessVolume: {fileID: 6144071437145000682, guid: 865eea82be0615e4bba270485a091f0e, type: 3}
+  easeCurve: {fileID: 11400000, guid: 826560d056d5f834cb0997fe8aa55264, type: 2}
+  data:
+    levelValues: 0000000003000000070000000f0000001b0000002b0000003a0000004e0000006400000096000000c80000002c010000
+    collectCounters:
+    - type: 0
+      amount: 184
+      value: 1
+    - type: 1
+      amount: 149
+      value: 3
+    - type: 2
+      amount: 0
+      value: 10
+    malus: 18
+    upgrade:
+      speed:
+        current: 5
+        values:
+        - 10
+        - 20
+        - 30
+        - 40
+        - 50
+      radius:
+        current: 0
+        values:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+      mass:
+        current: 2
+        values:
+        - 0.1
+        - 0.5
+        - 1
+        - 2
+        - 4
+      maxObjects:
+        current: 4
+        values:
+        - 1
+        - 2
+        - 3
+        - 5
+        - 7
+        - 10
+        - 15

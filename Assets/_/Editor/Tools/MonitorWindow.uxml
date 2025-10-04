@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:TwoPaneSplitView orientation="Vertical" fixed-pane-initial-dimension="160" fixed-pane-index="0">
+        <ui:VisualElement style="overflow: hidden;">
+            <ui:Label tabindex="-1" text="Queries" display-tooltip-when-elided="true" style="-unity-font-style: bold; padding-left: 7px; padding-right: 5px; padding-top: 5px; padding-bottom: 3px; background-color: rgb(42, 42, 42); border-bottom-color: rgb(25, 25, 25); border-bottom-width: 1px;" />
+            <ui:ListView focusable="true" name="Queries" style="padding-left: 0; padding-right: 0; padding-top: 2px; padding-bottom: 2px; flex-grow: 1;" />
+        </ui:VisualElement>
+        <ui:VisualElement style="overflow: hidden;">
+            <ui:Label tabindex="-1" text="Conditions" display-tooltip-when-elided="true" style="-unity-font-style: bold; padding-left: 7px; padding-right: 5px; padding-top: 5px; padding-bottom: 3px; background-color: rgb(42, 42, 42); border-bottom-color: rgb(25, 25, 25); border-bottom-width: 1px;" />
+            <ui:ListView focusable="true" name="Conditions" style="padding-left: 0; padding-right: 0; padding-top: 2px; padding-bottom: 2px; flex-grow: 1;" />
+        </ui:VisualElement>
+    </ui:TwoPaneSplitView>
+</ui:UXML>

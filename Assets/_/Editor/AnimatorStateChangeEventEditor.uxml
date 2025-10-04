@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement style="flex-direction: row; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 5px;">
+        <ui:Label text="Layer" style="-unity-text-align: middle-right; flex-basis: 40px;" />
+        <ui:DropdownField name="LayerIndex" binding-path="layerIndex" style="flex-basis: 55px;" />
+        <ui:Label text="@" style="-unity-text-align: middle-center; flex-basis: 30px; padding-left: 10px;" />
+        <ui:DropdownField name="State" binding-path="state" style="flex-grow: 1; max-width: 150px;" />
+        <ui:Label text="on" style="-unity-text-align: middle-center; flex-basis: 30px; padding-left: 10px;" />
+        <uie:EnumField type="Prototype.AnimatorStateChangeEvent+Type, Assembly-CSharp" binding-path="type" name="Event" style="flex-basis: 60px;" />
+    </ui:VisualElement>
+    <uie:PropertyField binding-path="callbacks" style="min-height: 30px; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" />
+</ui:UXML>

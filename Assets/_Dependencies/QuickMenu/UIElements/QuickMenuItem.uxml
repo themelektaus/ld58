@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="Item">
+        <ui:VisualElement style="flex-direction: row;">
+            <ui:Label text="Category" name="ItemCategory" />
+            <ui:Label text="Sub Category" name="ItemSubCategory" class="with-category" />
+            <ui:Label text="Title" name="ItemTitle" />
+        </ui:VisualElement>
+        <ui:Label text="Description" name="ItemDescription" class="with-category" />
+    </ui:VisualElement>
+</ui:UXML>

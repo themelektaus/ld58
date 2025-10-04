@@ -1,0 +1,465 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1edc947b884bb37439ea0aa2b4baee52, type: 3}
+  m_Name: Quick Menu Execution - Assets Create
+  m_EditorClassIdentifier: 
+  active: 1
+  visible: 1
+  menuItems:
+  - visible: 1
+    category: Create
+    subCategory: 
+    title: Folder
+    description: 
+    path: Assets/Create/Folder
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 
+    title: C# Script
+    description: 
+    path: Assets/Create/C# Script
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 
+    title: MonoBehaviour Script
+    description: 
+    path: Assets/Create/MonoBehaviour Script
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: Shader
+    title: Standard Surface
+    description: 
+    path: Assets/Create/Shader/Standard Surface Shader
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: Shader
+    title: Unlit
+    description: 
+    path: Assets/Create/Shader/Unlit Shader
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Shader
+    title: Image Effect
+    description: 
+    path: Assets/Create/Shader/Image Effect Shader
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Shader
+    title: Compute
+    description: 
+    path: Assets/Create/Shader/Compute Shader
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Shader
+    title: Ray Tracing
+    description: 
+    path: Assets/Create/Shader/Ray Tracing Shader
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Shader
+    title: Variant Collection
+    description: 
+    path: Assets/Create/Shader Variant Collection
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Test
+    title: Tests Assembly Folder
+    description: 
+    path: Assets/Create/Testing/Tests Assembly Folder
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Test
+    title: C# Test Script
+    description: 
+    path: Assets/Create/Testing/C# Test Script
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Playable
+    title: Playable Behaviour C# Script
+    description: 
+    path: Assets/Create/Playables/Playable Behaviour C# Script
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Playable
+    title: Playable Asset C# Script
+    description: 
+    path: Assets/Create/Playables/Playable Asset C# Script
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: Assembly
+    title: Assembly Definition
+    description: 
+    path: Assets/Create/Assembly Definition
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Assembly
+    title: Assembly Definition Reference
+    description: 
+    path: Assets/Create/Assembly Definition Reference
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Text
+    title: Font Asset
+    description: 
+    path: Assets/Create/Text/Font Asset
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Text
+    title: Font Asset Variant
+    description: 
+    path: Assets/Create/Text/Font Asset Variant
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Text
+    title: Sprite Asset
+    description: 
+    path: Assets/Create/Text/Sprite Asset
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Text
+    title: Text StyleSheet
+    description: 
+    path: Assets/Create/Text/Text StyleSheet
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Text
+    title: Color Gradient
+    description: 
+    path: Assets/Create/Text/Color Gradient
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: TMP
+    title: Font Asset
+    description: 
+    path: Assets/Create/TextMeshPro/Font Asset
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: TMP
+    title: Font Asset Variant
+    description: 
+    path: Assets/Create/TextMeshPro/Font Asset Variant
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: TMP
+    title: Sprite Asset
+    description: 
+    path: Assets/Create/TextMeshPro/Sprite Asset
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: TMP
+    title: Color Gradient
+    description: 
+    path: Assets/Create/TextMeshPro/Color Gradient
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: TMP
+    title: Style Sheet
+    description: 
+    path: Assets/Create/TextMeshPro/Style Sheet
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 
+    title: Scene
+    description: 
+    path: Assets/Create/Scene
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 
+    title: Scene Template
+    description: 
+    path: Assets/Create/Scene Template
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 
+    title: Scene Template From Scene
+    description: 
+    path: Assets/Create/Scene Template From Scene
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 
+    title: Post-processing Profile
+    description: 
+    path: Assets/Create/Post-processing Profile
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 
+    title: Scene Template Pipeline
+    description: 
+    path: Assets/Create/Scene Template Pipeline
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 
+    title: Prefab
+    description: 
+    path: Assets/Create/Prefab
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 
+    title: Prefab Variant
+    description: 
+    path: Assets/Create/Prefab Variant
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 
+    title: Audio Mixer
+    description: 
+    path: Assets/Create/Audio Mixer
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 
+    title: Material
+    description: 
+    path: Assets/Create/Material
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 
+    title: Lens Flare
+    description: 
+    path: Assets/Create/Lens Flare
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 
+    title: Render Texture
+    description: 
+    path: Assets/Create/Render Texture
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 
+    title: Lightmap Parameters
+    description: 
+    path: Assets/Create/Lightmap Parameters
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 
+    title: Lighting Settings
+    description: 
+    path: Assets/Create/Lighting Settings
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 
+    title: Custom Render Texture
+    description: 
+    path: Assets/Create/Custom Render Texture
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 
+    title: Animator Controller
+    description: 
+    path: Assets/Create/Animator Controller
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 
+    title: Animation
+    description: 
+    path: Assets/Create/Animation
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 
+    title: Animator Override Controller
+    description: 
+    path: Assets/Create/Animator Override Controller
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 
+    title: Avatar Mask
+    description: 
+    path: Assets/Create/Avatar Mask
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 
+    title: Timeline
+    description: 
+    path: Assets/Create/Timeline
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 
+    title: Signal
+    description: 
+    path: Assets/Create/Signal
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: 
+    title: Physic Material
+    description: 
+    path: Assets/Create/Physic Material
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 
+    title: GUI Skin
+    description: 
+    path: Assets/Create/GUI Skin
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 
+    title: Custom Font
+    description: 
+    path: Assets/Create/Custom Font
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Legacy
+    title: Cubemap
+    description: 
+    path: Assets/Create/Legacy/Cubemap
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: UI Toolkit
+    title: Style Sheet
+    description: 
+    path: Assets/Create/UI Toolkit/Style Sheet
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: UI Toolkit
+    title: TSS Theme File
+    description: 
+    path: Assets/Create/UI Toolkit/TSS Theme File
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: UI Toolkit
+    title: Default Runtime Theme File
+    description: 
+    path: Assets/Create/UI Toolkit/Default Runtime Theme File
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: UI Toolkit
+    title: UI Document
+    description: 
+    path: Assets/Create/UI Toolkit/UI Document
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: UI Toolkit
+    title: Panel Settings Asset
+    description: 
+    path: Assets/Create/UI Toolkit/Panel Settings Asset
+    requiresTransform: 0
+  - visible: 1
+    category: Create
+    subCategory: UI Toolkit
+    title: Editor Window
+    description: 
+    path: Assets/Create/UI Toolkit/Editor Window
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: UI Toolkit
+    title: Text Settings
+    description: 
+    path: Assets/Create/UI Toolkit/Text Settings
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Search
+    title: Assets Index
+    description: 
+    path: Assets/Create/Search/Assets Index
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Search
+    title: Prefabs Index
+    description: 
+    path: Assets/Create/Search/Prefabs Index
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Search
+    title: Scene Index
+    description: 
+    path: Assets/Create/Search/Scene Index
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Cinemachine
+    title: Blender Settings
+    description: 
+    path: Assets/Create/Cinemachine/BlenderSettings
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Cinemachine
+    title: Noise Settings
+    description: 
+    path: Assets/Create/Cinemachine/NoiseSettings
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: Cinemachine
+    title: Fixed Signal Definition
+    description: 
+    path: Assets/Create/Cinemachine/Fixed Signal Definition
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 
+    title: Brush
+    description: 
+    path: Assets/Create/Brush
+    requiresTransform: 0
+  - visible: 0
+    category: Create
+    subCategory: 
+    title: Terrain Layer
+    description: 
+    path: Assets/Create/Terrain Layer
+    requiresTransform: 0

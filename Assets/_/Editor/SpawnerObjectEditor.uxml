@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-direction: row;">
+        <uie:ObjectField binding-path="gameObject" name="GameObject" type="UnityEngine.GameObject, UnityEngine.CoreModule" style="flex-grow: 1;" />
+        <ui:Label text="Lifetime" display-tooltip-when-elided="true" style="-unity-text-align: middle-left; padding-left: 10px;" />
+        <uie:FloatField value="0" name="Lifetime" binding-path="lifetime" style="flex-basis: 30px;" />
+    </ui:VisualElement>
+</ui:UXML>

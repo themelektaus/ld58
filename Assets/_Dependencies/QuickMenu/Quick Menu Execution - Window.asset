@@ -1,0 +1,374 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1edc947b884bb37439ea0aa2b4baee52, type: 3}
+  m_Name: Quick Menu Execution - Window
+  m_EditorClassIdentifier: 
+  active: 1
+  visible: 1
+  menuItems:
+  - visible: 0
+    category: Window
+    subCategory: Search
+    title: New Window
+    description: 
+    path: Window/Search/New Window
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Search
+    title: Transient Window
+    description: 
+    path: Window/Search/Transient Window
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Search
+    title: Index Manager
+    description: 
+    path: Window/Search/Index Manager
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Search
+    title: Find Files
+    description: 
+    path: Window/Search/Find Files
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Search
+    title: Asset Store
+    description: 
+    path: Window/Search/Asset Store
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Search
+    title: Asset Database
+    description: 
+    path: Window/Search/Asset Database
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Search
+    title: Performance Trackers
+    description: 
+    path: Window/Search/Performance Trackers
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Search
+    title: Open Report
+    description: 
+    path: Window/Search/Open Report...
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: 
+    title: Asset Store
+    description: 
+    path: Window/Asset Store
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: 
+    title: Package Manager
+    description: 
+    path: Window/Package Manager
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: 
+    title: Asset Version Control
+    description: 
+    path: Window/Asset Management/Version Control
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Text
+    title: Font Asset Creator
+    description: 
+    path: Window/Text/Font Asset Creator
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Text
+    title: Sprite Importer
+    description: 
+    path: Window/Text/Sprite Importer
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: Text
+    title: Font Asset Creator (TMP)
+    description: 
+    path: Window/TextMeshPro/Font Asset Creator
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Text
+    title: Sprite Importer (TMP)
+    description: 
+    path: Window/TextMeshPro/Sprite Importer
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Text
+    title: Import TMP Essential Resources
+    description: 
+    path: Window/TextMeshPro/Import TMP Essential Resources
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Text
+    title: Import TMP Examples and Extras
+    description: 
+    path: Window/TextMeshPro/Import TMP Examples and Extras
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Text
+    title: Project Files GUID Remapping Tool (TMP)
+    description: 
+    path: Window/TextMeshPro/Project Files GUID Remapping Tool
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Text
+    title: Project Text Spacing Conversion Tool (TMP)
+    description: 
+    path: Window/TextMeshPro/Project Text Spacing Conversion Tool
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: General
+    title: Scene
+    description: 
+    path: Window/General/Scene
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: General
+    title: Game
+    description: 
+    path: Window/General/Game
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: General
+    title: Inspector
+    description: 
+    path: Window/General/Inspector
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: General
+    title: Hierarchy
+    description: 
+    path: Window/General/Hierarchy
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: General
+    title: Project
+    description: 
+    path: Window/General/Project
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: General
+    title: Console
+    description: 
+    path: Window/General/Console
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: General
+    title: Progress
+    description: 
+    path: Window/General/Progress
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: General
+    title: Test Runner
+    description: 
+    path: Window/General/Test Runner
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: General
+    title: Services
+    description: 
+    path: Window/General/Services
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: General
+    title: Device Simulator
+    description: 
+    path: Window/General/Device Simulator
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: Rendering
+    title: Lighting
+    description: 
+    path: Window/Rendering/Lighting
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: Rendering
+    title: Light Explorer
+    description: 
+    path: Window/Rendering/Light Explorer
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Rendering
+    title: Occlusion Culling
+    description: 
+    path: Window/Rendering/Occlusion Culling
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: Animation
+    title: Animation
+    description: 
+    path: Window/Animation/Animation
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: Animation
+    title: Animator
+    description: 
+    path: Window/Animation/Animator
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Animation
+    title: Animator Parameter
+    description: 
+    path: Window/Animation/Animator Parameter
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: Audio
+    title: Audio Mixer
+    description: 
+    path: Window/Audio/Audio Mixer
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: Sequencing
+    title: Timeline
+    description: 
+    path: Window/Sequencing/Timeline
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: Analysis
+    title: Profiler
+    description: 
+    path: Window/Analysis/Profiler
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: Analysis
+    title: Profiler (Standalone)
+    description: 
+    path: Window/Analysis/Profiler (Standalone Process)
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Analysis
+    title: Frame Debugger
+    description: 
+    path: Window/Analysis/Frame Debugger
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Analysis
+    title: Physics Debugger
+    description: 
+    path: Window/Analysis/Physics Debugger
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Analysis
+    title: Import Activity
+    description: 
+    path: Window/Analysis/Import Activity
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: Analysis
+    title: IMGUI Debugger
+    description: 
+    path: Window/Analysis/IMGUI Debugger
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: 2D
+    title: Sprite Editor
+    description: 
+    path: Window/2D/Sprite Editor
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: 2D
+    title: Tile Palette
+    description: 
+    path: Window/2D/Tile Palette
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: AI
+    title: Navigation
+    description: 
+    path: Window/AI/Navigation
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: UI Toolkit
+    title: UI Builder
+    description: 
+    path: Window/UI Toolkit/UI Builder
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: UI Toolkit
+    title: Samples
+    description: 
+    path: Window/UI Toolkit/Samples
+    requiresTransform: 0
+  - visible: 1
+    category: Window
+    subCategory: UI Toolkit
+    title: Debugger
+    description: 
+    path: Window/UI Toolkit/Debugger
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: UI Toolkit
+    title: Event Debugger
+    description: 
+    path: Window/UI Toolkit/Event Debugger
+    requiresTransform: 0
+  - visible: 0
+    category: Window
+    subCategory: UI Toolkit
+    title: Package Asset Converter
+    description: 
+    path: Window/UI Toolkit/Package Asset Converter
+    requiresTransform: 0

@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:VisualElement name="Content" style="flex-direction: row;">
+        <ui:Toggle name="Visible" binding-path="visible" />
+        <ui:TextField name="Category" binding-path="category" style="flex-basis: 80px;" />
+        <ui:TextField name="SubCategory" binding-path="subCategory" style="flex-basis: 80px;" />
+        <ui:TextField name="Title" binding-path="title" style="flex-basis: 200px;" />
+        <ui:TextField name="Path" binding-path="path" style="flex-grow: 7;" />
+    </ui:VisualElement>
+</ui:UXML>

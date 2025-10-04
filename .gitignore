@@ -1,0 +1,13 @@
+/.vs/
+/Build/
+/Library/
+/Logs/
+/obj/
+/Temp/
+/UserSettings/
+/*.csproj
+/*.csproj.user
+/*.sln
+
+/Assets/Ignored from Git/*
+!/Assets/Ignored from Git/Place your personal testing stuff here
