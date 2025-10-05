@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d395190edf0c4124382f84bc10ba3b22, type: 3}
+  m_Name: Glass
+  m_EditorClassIdentifier: Assembly-CSharp::Prototype.SoundEffect
+  collection: {fileID: 11400000, guid: 2ca962183dd41a94b99cce03b7942704, type: 2}
+  distanceRange: {fileID: 11400000, guid: 4e9df4ba97276f74a8a9dd5940517b5c, type: 2}
+  volumeMultiplier: {x: 1, y: 1}
+  pitch: {x: 0.8, y: 1.2}
+  audioMixerGroup: {fileID: 0}
+  volumeMultiplierFactor: 0.29273498
+  loop: 0
+  fade: {x: 0, y: 0}

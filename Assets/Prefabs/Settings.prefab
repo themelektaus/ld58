@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 45}
+  m_SizeDelta: {x: 0, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3705661454145724656
 MonoBehaviour:
@@ -573,6 +573,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 0
+  delayByFrameCount: 0
 --- !u!114 &4088192500322991174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -587,6 +588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: 2
   customName: Settings
+  applyOnAwake: 1
 --- !u!1 &8287708524968755646
 GameObject:
   m_ObjectHideFlags: 0
@@ -741,6 +743,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8810158119645963686}
     m_Modifications:
+    - target: {fileID: 2073220255512149260, guid: 1079544e2326c484db59464477724de1, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3446245297007857127, guid: 1079544e2326c484db59464477724de1, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1495,9 +1501,25 @@ PrefabInstance:
       propertyPath: m_text
       value: V-Sync enabled
       objectReference: {fileID: 0}
+    - target: {fileID: 1301351377151362969, guid: 7ce5ce160d8b7c041b38a5686b459769, type: 3}
+      propertyPath: m_fontSize
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301351377151362969, guid: 7ce5ce160d8b7c041b38a5686b459769, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 21
+      objectReference: {fileID: 0}
     - target: {fileID: 1906965322523883792, guid: 7ce5ce160d8b7c041b38a5686b459769, type: 3}
       propertyPath: m_Name
       value: V-Sync
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532108454163493924, guid: 7ce5ce160d8b7c041b38a5686b459769, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915657833087187954, guid: 7ce5ce160d8b7c041b38a5686b459769, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 6080465227307757069, guid: 7ce5ce160d8b7c041b38a5686b459769, type: 3}
       propertyPath: boolReference.path
@@ -1591,6 +1613,14 @@ PrefabInstance:
       propertyPath: m_text
       value: V-Sync disabled
       objectReference: {fileID: 0}
+    - target: {fileID: 8594043443045281805, guid: 7ce5ce160d8b7c041b38a5686b459769, type: 3}
+      propertyPath: m_fontSize
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8594043443045281805, guid: 7ce5ce160d8b7c041b38a5686b459769, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 21
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1654,9 +1684,25 @@ PrefabInstance:
       propertyPath: m_text
       value: Fullscreen
       objectReference: {fileID: 0}
+    - target: {fileID: 1301351377151362969, guid: 7ce5ce160d8b7c041b38a5686b459769, type: 3}
+      propertyPath: m_fontSize
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1301351377151362969, guid: 7ce5ce160d8b7c041b38a5686b459769, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 21
+      objectReference: {fileID: 0}
     - target: {fileID: 1906965322523883792, guid: 7ce5ce160d8b7c041b38a5686b459769, type: 3}
       propertyPath: m_Name
       value: Fullscreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 2532108454163493924, guid: 7ce5ce160d8b7c041b38a5686b459769, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.55
+      objectReference: {fileID: 0}
+    - target: {fileID: 2915657833087187954, guid: 7ce5ce160d8b7c041b38a5686b459769, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 6080465227307757069, guid: 7ce5ce160d8b7c041b38a5686b459769, type: 3}
       propertyPath: boolReference.path
@@ -1749,6 +1795,14 @@ PrefabInstance:
     - target: {fileID: 8594043443045281805, guid: 7ce5ce160d8b7c041b38a5686b459769, type: 3}
       propertyPath: m_text
       value: Window mode
+      objectReference: {fileID: 0}
+    - target: {fileID: 8594043443045281805, guid: 7ce5ce160d8b7c041b38a5686b459769, type: 3}
+      propertyPath: m_fontSize
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 8594043443045281805, guid: 7ce5ce160d8b7c041b38a5686b459769, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 21
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

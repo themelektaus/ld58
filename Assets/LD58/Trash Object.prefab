@@ -52,6 +52,7 @@ MonoBehaviour:
   body: {fileID: 621487448042931095}
   bodyCollider: {fileID: 0}
   type: 0
+  grapSound: {fileID: 0}
 --- !u!114 &970994756188056749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,10 +89,6 @@ MonoBehaviour:
   targetTime: 0
   references:
     items:
-    - type: 0
-      object: {fileID: 5888779058096838555}
-      path: color.a
-      serializedData: 
     - type: 0
       object: {fileID: 212537370404578268}
       path: localScale
@@ -179,7 +176,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -7,6 +7,8 @@ using Global = Prototype.LD58.LD58_Global;
 
 public class RoboCursor : MonoBehaviour
 {
+    public RoboAvatar roboAvatar;
+
     [SerializeField] Rigidbody2D body;
     [SerializeField] float grabPullDistance = 1;
 
@@ -32,6 +34,14 @@ public class RoboCursor : MonoBehaviour
 
     void Update()
     {
+        if (Global.instance.IsPaused())
+        {
+            sprite1.enabled = true;
+            sprite2.enabled = false;
+            DropAllTrashObjects();
+            return;
+        }
+
         UpdateArmPosition();
 
         body.mass = upgrade.mass;
@@ -105,6 +115,7 @@ public class RoboCursor : MonoBehaviour
             joint.connectedAnchor = new(0, .15f);
 
             trashObject.currentGrabber = this;
+            trashObject.grapSound.PlayRandomClipAt(trashObject.body.position);
 
             var connectedTrashObject = new ConnectedTrashObjects
             {
@@ -145,12 +156,29 @@ public class RoboCursor : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (Global.instance.IsPaused())
+        {
+            return;
+        }
+
         Vector2 currentPosition = body.position;
         Vector2 targetPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+
+        float speed;
+
+        if (roboAvatar.sadness > 0)
+        {
+            targetPosition.y = -17;
+            speed = 100;
+        }
+        else
+        {
+            speed = upgrade.speed;
+        }
 
         var direction = targetPosition - currentPosition;
         direction = Mathf.Min(1, direction.magnitude) * direction.normalized;
 
-        body.MovePosition(currentPosition + direction * (upgrade.speed * Time.fixedDeltaTime));
+        body.MovePosition(currentPosition + direction * (speed * Time.fixedDeltaTime));
     }
 }

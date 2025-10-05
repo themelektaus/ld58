@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Rendering.PostProcessing;
@@ -38,6 +37,7 @@ namespace Prototype.LD58
             public LD58_GameStateMachine gameStateMachine;
             public Framerate framerate;
             public PostProcessVolume postProcessVolume;
+            public GameMouseCursor gameMouseCursor;
         }
 
         public InterpolationCurve.InterpolationCurve easeCurve;
@@ -88,21 +88,48 @@ namespace Prototype.LD58
             }
         }
 
+        public UnityEngine.Audio.AudioMixer audioMixer;
+
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         static void Init()
         {
             runtimeSingletons.Clear();
+            instance.Resume();
+        }
 
-            foreach (var collectCounter in instance.data.collectCounters)
+        public bool IsPaused()
+        {
+            return pause;
+        }
+
+        public void Pause()
+        {
+            pause = true;
+        }
+
+        public void Resume()
+        {
+            pause = false;
+        }
+
+        public void Retry()
+        {
+            gameStateMachine.Trigger("Switch Level");
+            SceneSwitcher.GotoScene("Ingame", "Ingame", 1);
+        }
+
+        public void ResetGame()
+        {
+            foreach (var collectCounter in data.collectCounters)
             {
                 collectCounter.amount = 0;
             }
 
-            instance.data.malus = 0;
-            instance.data.upgrade.speed.current = 0;
-            instance.data.upgrade.radius.current = 0;
-            instance.data.upgrade.mass.current = 0;
-            instance.data.upgrade.maxObjects.current = 0;
+            data.malus = 0;
+            data.upgrade.speed.current = 0;
+            data.upgrade.radius.current = 0;
+            data.upgrade.mass.current = 0;
+            data.upgrade.maxObjects.current = 0;
         }
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -145,6 +172,11 @@ namespace Prototype.LD58
                     .Where(x => x.name == "Post-process Volume")
             );
 
+            AddSingleton(
+                instance.singletons.gameMouseCursor,
+                () => FindObjectsByType<GameMouseCursor>(FindObjectsSortMode.None)
+            );
+
             foreach (var singleton in runtimeSingletons)
             {
                 singleton.Clear();
@@ -177,6 +209,23 @@ namespace Prototype.LD58
                 prefab = prefab,
                 getOthers = () => getOthers().Select(x => x.GetGameObject())
             });
+        }
+
+        [SerializeField] bool pause;
+
+        public bool IsLevelEqual(int level)
+        {
+            return data.GetLevel() == level;
+        }
+
+        public bool IsLevelEqualOrBigger(int level)
+        {
+            return data.GetLevel() >= level;
+        }
+
+        public bool IsLevelLess(int level)
+        {
+            return data.GetLevel() < level;
         }
 
         public Data data;

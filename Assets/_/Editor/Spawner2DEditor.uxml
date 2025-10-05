@@ -2,6 +2,7 @@
     <ui:VisualElement style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
         <uie:PropertyField binding-path="maxGameObjects" name="maxGameObjects" style="padding-left: 15px; padding-right: 8px; padding-top: 3px; padding-bottom: 3px; background-color: rgba(0, 0, 0, 0.18); margin-top: 5px;" />
         <uie:PropertyField binding-path="budget" name="budget" style="padding-left: 15px; padding-right: 8px; padding-top: 3px; padding-bottom: 3px; background-color: rgba(0, 0, 0, 0.18); margin-top: 0;" />
+        <uie:PropertyField binding-path="destroyOnDisable" name="destroyOnDisable" style="padding-left: 15px; padding-right: 8px; padding-top: 3px; padding-bottom: 3px; background-color: rgba(0, 0, 0, 0.18); margin-top: 0;" />
         <ui:VisualElement name="Objects" style="border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; min-height: 0;" />
         <uie:Vector2Field label="Interval" binding-path="interval" name="interval" />
         <uie:ObjectField label="Area" type="UnityEngine.Collider2D, UnityEngine.Physics2DModule" binding-path="area" name="area" />

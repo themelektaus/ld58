@@ -23,29 +23,32 @@ MonoBehaviour:
     gameStateMachine: {fileID: 6552470851627567931, guid: 06e30dbd6753cda439d56e04fee8e415, type: 3}
     framerate: {fileID: 8009155746848446687, guid: 6f8923da8fa870e48be9087179c057bc, type: 3}
     postProcessVolume: {fileID: 6144071437145000682, guid: 865eea82be0615e4bba270485a091f0e, type: 3}
+    gameMouseCursor: {fileID: 3362005355238678206, guid: 4d71e82226567e3499d3ffe0845b98b9, type: 3}
   easeCurve: {fileID: 11400000, guid: 826560d056d5f834cb0997fe8aa55264, type: 2}
+  audioMixer: {fileID: 24100000, guid: b96a2486ae7a0ac45bfed864f6f108e0, type: 2}
+  pause: 0
   data:
-    levelValues: 0000000003000000070000000f0000001b0000002b0000003a0000004e0000006400000096000000c80000002c010000
+    levelValues: 0000000003000000070000000f0000001b0000002b0000003a0000004e0000006400000096000000c80000002c01000090010000f401000058020000bc0200002003000084030000e8030000
     collectCounters:
     - type: 0
-      amount: 184
+      amount: 0
       value: 1
     - type: 1
-      amount: 149
+      amount: 0
       value: 3
     - type: 2
       amount: 0
       value: 10
-    malus: 18
+    malus: 0
     upgrade:
       speed:
-        current: 5
+        current: 0
         values:
         - 10
-        - 20
-        - 30
-        - 40
-        - 50
+        - 18
+        - 26
+        - 34
+        - 42
       radius:
         current: 0
         values:
@@ -55,15 +58,15 @@ MonoBehaviour:
         - 4
         - 5
       mass:
-        current: 2
+        current: 0
         values:
-        - 0.1
+        - 0.25
         - 0.5
         - 1
         - 2
         - 4
       maxObjects:
-        current: 4
+        current: 0
         values:
         - 1
         - 2

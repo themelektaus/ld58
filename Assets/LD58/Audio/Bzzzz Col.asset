@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61a999748d5dc942a06b1a721e572a9, type: 3}
+  m_Name: Bzzzz Col
+  m_EditorClassIdentifier: Assembly-CSharp::Prototype.SoundEffectCollection
+  defaultAudioMixerGroup: {fileID: 585082009552289682, guid: b96a2486ae7a0ac45bfed864f6f108e0, type: 2}
+  clips:
+  - {fileID: 8300000, guid: ddf5bd27a2605ed4a9bc73d061083e5c, type: 3}
+  defaultVolume: 0.8
+  additionalGain: 0
+  maxPlayInterval: 0.1

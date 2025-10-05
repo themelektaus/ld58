@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61a999748d5dc942a06b1a721e572a9, type: 3}
+  m_Name: Blob
+  m_EditorClassIdentifier: Assembly-CSharp::Prototype.SoundEffectCollection
+  defaultAudioMixerGroup: {fileID: 585082009552289682, guid: b96a2486ae7a0ac45bfed864f6f108e0, type: 2}
+  clips:
+  - {fileID: 8300000, guid: 95e65ec5784157045beb198ca2819de2, type: 3}
+  - {fileID: 8300000, guid: 44468f78feab6ec43bf681815a4bf2ad, type: 3}
+  - {fileID: 8300000, guid: 650cf01e236eef04cb4aece91d4b2407, type: 3}
+  - {fileID: 8300000, guid: d9fc544588344c244a36f2e06b63b9a9, type: 3}
+  - {fileID: 8300000, guid: ef97319938867624294074cd1c9ec544, type: 3}
+  - {fileID: 8300000, guid: e23010ccfbaf00f45aeb04e079a08181, type: 3}
+  defaultVolume: 1
+  additionalGain: 0.781
+  maxPlayInterval: 0.1

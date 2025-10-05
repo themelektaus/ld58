@@ -10,6 +10,7 @@ namespace Prototype
     {
         [SerializeField] int maxGameObjects = -1;
         [SerializeField] int budget = -1;
+        [SerializeField] bool destroyOnDisable;
         [SerializeField] List<SpawnerObject> objects;
         [SerializeField] Vector2 interval = Vector2.one;
 
@@ -30,6 +31,23 @@ namespace Prototype
 
         readonly HashSet<GameObject> gameObjects = new();
 
+        void OnEnable()
+        {
+            timer.Reset(clearTime: false);
+        }
+
+        void OnDisable()
+        {
+            if (!destroyOnDisable)
+                return;
+
+            foreach (var gameObject in gameObjects)
+                if (gameObject)
+                    gameObject.Destroy();
+
+            gameObjects.Clear();
+        }
+
         void Update()
         {
             gameObjects.RemoveWhere(x => !x);
@@ -47,7 +65,7 @@ namespace Prototype
             if (maxGameObjects > -1 && gameObjects.Count >= maxGameObjects)
                 return;
 
-            if (!timer.Update(interval))
+            if (!timer.Update(interval, clearTime: false))
                 return;
 
             Spawn();

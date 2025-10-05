@@ -49,6 +49,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   type: 0
   roboAvatar: {fileID: 0}
+  sound1: {fileID: 11400000, guid: 1d7a17ba5432f57408d67c685cd74dc7, type: 2}
+  sound2: {fileID: 11400000, guid: 1d7a17ba5432f57408d67c685cd74dc7, type: 2}
 --- !u!61 &3203914683595812835
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -38,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 12
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -325,8 +325,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 317400672}
     m_Modifications:
     - target: {fileID: 553909073971894792, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
+      propertyPath: m_fontSize
+      value: 66
+      objectReference: {fileID: 0}
+    - target: {fileID: 553909073971894792, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 2f17e8bb3967fe14093d5fec798fffd9, type: 2}
+    - target: {fileID: 553909073971894792, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 66
+      objectReference: {fileID: 0}
+    - target: {fileID: 553909073971894792, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 21700449227511232, guid: 2f17e8bb3967fe14093d5fec798fffd9, type: 2}
+    - target: {fileID: 553909073971894792, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 553909073971894792, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1963837206999651603, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
       propertyPath: m_Pivot.x
@@ -517,6 +537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _name: 0
   customName: 
+  applyOnAwake: 1
 --- !u!4 &1705061239
 Transform:
   m_ObjectHideFlags: 0

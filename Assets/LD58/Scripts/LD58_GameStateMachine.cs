@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace Prototype.LD58
@@ -7,17 +5,22 @@ namespace Prototype.LD58
     [AddComponentMenu("LD58: Game State Machine")]
     public class LD58_GameStateMachine : AnimatorStateBehaviour
     {
-        LevelUpScreen levelUpScreen;
-
         [AfterEnter("Ingame")]
-        void AfterEnter_Ingame(AnimatorStateInfo referenceState)
+        public void AfterEnter_Ingame(AnimatorStateInfo referenceState)
         {
-            if (referenceState.IsName("Settings"))
+            if (!referenceState.IsName("Settings"))
             {
-                return;
+                level = 0;
+                LD58_Global.instance.ResetGame();
             }
 
-            levelUpScreen = FindAnyObjectByType<LevelUpScreen>(FindObjectsInactive.Include);
+            LD58_Global.instance.Resume();
+        }
+
+        [BeforeExit("Ingame")]
+        void BeforeExit_Ingame()
+        {
+            LD58_Global.instance.Pause();
         }
 
         int level;
@@ -25,18 +28,26 @@ namespace Prototype.LD58
         [Update("Ingame")]
         void Update_Ingame()
         {
-            if (levelUpScreen.IsActiveOrEnabled())
+            if (LD58_Global.instance.IsPaused())
             {
+
                 return;
             }
 
             var level = LD58_Global.instance.data.GetLevel();
 
-            if (this.level < level)
+            if (this.level >= level)
             {
-                this.level++;
-                levelUpScreen.gameObject.SetActive(true);
+                return;
             }
+
+            this.level++;
+            LD58_Global.instance.Pause();
+
+            this.Wait(.2f).Start(() =>
+            {
+                FindAnyObjectByType<LevelUpScreen>(FindObjectsInactive.Include).gameObject.SetActive(true);
+            });
         }
     }
 }

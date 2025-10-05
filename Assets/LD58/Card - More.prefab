@@ -237,6 +237,7 @@ GameObject:
   - component: {fileID: 5181441150284613688}
   - component: {fileID: 2366249352554126414}
   - component: {fileID: 9015214550622284403}
+  - component: {fileID: 6382431893050221792}
   m_Layer: 5
   m_Name: Card - More
   m_TagString: Untagged
@@ -336,6 +337,37 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &6382431893050221792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4255245852111433612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7c584a108914442958853e5d9e07a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Prototype.SimpleAnimation
+  playOnAwake: 0
+  destroyOnFinish: 0
+  loop: 0
+  writeTargetTime: 0
+  curve: {fileID: 11400000, guid: fcc7e33f11e12c647bf1c83bf477818e, type: 2}
+  speed: 4
+  min: 1
+  max: 1.2
+  boolThreshold: 0.5
+  targetTime: 0
+  references:
+    items:
+    - type: 0
+      object: {fileID: 5332080075824145726}
+      path: localScale
+      serializedData: 
+  onFinish:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &4579594895068170264
 GameObject:
   m_ObjectHideFlags: 0

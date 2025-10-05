@@ -57,6 +57,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2048065380258082577, guid: 61e4f54939f7d014784a216d177dcd5c, type: 3}
+      propertyPath: grapSound
+      value: 
+      objectReference: {fileID: 11400000, guid: c1bf50edfb528634183b2f2e878ab3e9, type: 2}
+    - target: {fileID: 2048065380258082577, guid: 61e4f54939f7d014784a216d177dcd5c, type: 3}
       propertyPath: bodyCollider
       value: 
       objectReference: {fileID: 2424160778423648291}

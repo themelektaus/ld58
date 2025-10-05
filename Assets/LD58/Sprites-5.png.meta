@@ -187,7 +187,7 @@ TextureImporter:
         width: 466
         height: 463
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -196,6 +196,160 @@ TextureImporter:
       bones: []
       spriteID: 2adf8824f1fe6f34e82bdb1ca71d8d54
       internalID: 961521113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites-5_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 59
+        width: 739
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2489da22b2cb2444944d76078db74f1
+      internalID: 869548221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites-5_5
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 90
+        width: 35
+        height: 106
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ac60a328a3fee4c81014f61150f1ac
+      internalID: 710739191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites-5_6
+      rect:
+        serializedVersion: 2
+        x: 1552
+        y: 830
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf03912902737840a2d336fe2ccefa7
+      internalID: -54015586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites-5_7
+      rect:
+        serializedVersion: 2
+        x: 1736
+        y: 832
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e54fbd1a275bfb43bac8d1cd92ef180
+      internalID: -1684838251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites-5_8
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 634
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81cf28293e70ea14fa110595262329ce
+      internalID: -164874222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites-5_9
+      rect:
+        serializedVersion: 2
+        x: 1762
+        y: 644
+        width: 160
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49fa289071ca45a4a817a99d5732fde7
+      internalID: 1483418796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites-5_10
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 57
+        width: 743
+        height: 232
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 131, y: 0, z: 130, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5ed3881bc59d3f4c898db6e7ff1388f
+      internalID: -2093514247
       vertices: []
       indices: 
       edges: []
@@ -216,8 +370,15 @@ TextureImporter:
     nameFileIdTable:
       Sprites-5_0: -5452669578838151866
       Sprites-5_1: -710406743
+      Sprites-5_10: -2093514247
       Sprites-5_2: 1293258154
       Sprites-5_3: 961521113
+      Sprites-5_4: 869548221
+      Sprites-5_5: 710739191
+      Sprites-5_6: -54015586
+      Sprites-5_7: -1684838251
+      Sprites-5_8: -164874222
+      Sprites-5_9: 1483418796
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

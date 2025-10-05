@@ -177,7 +177,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Thanks for playing :)
+  m_text: '<b>Thanks for playing :)</b>
+
+
+    - Ludum Dare 58 -
+
+    - Trash-Out
+    -
+
+    - by Tausi -
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4bd810f1cbcb0f446a8f5a31453e243f, type: 2}
   m_sharedMaterial: {fileID: 21539420542967178, guid: 4bd810f1cbcb0f446a8f5a31453e243f, type: 2}
@@ -204,8 +214,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -273,7 +283,7 @@ MonoBehaviour:
   loop: 0
   writeTargetTime: 1
   curve: {fileID: 11400000, guid: 12cb2ccd5e6ecc049b5146981dee7f52, type: 2}
-  speed: 1
+  speed: 0.5
   min: 0
   max: 1
   boolThreshold: 0.5
@@ -350,7 +360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.05882353, g: 0.05882353, b: 0.05882353, a: 1}
+  m_Color: {r: 0.044143803, g: 0.1509434, b: 0.10021256, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0

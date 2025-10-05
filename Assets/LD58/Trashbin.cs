@@ -8,6 +8,9 @@ public class Trashbin : MonoBehaviour
 
     public RoboAvatar roboAvatar;
 
+    [SerializeField] SoundEffect sound1;
+    [SerializeField] SoundEffect sound2;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         var trashObject = collision.GetComponentInParent<TrashObject>();
@@ -27,12 +30,16 @@ public class Trashbin : MonoBehaviour
 
         if (trashObject.type == type)
         {
+            sound1.PlayRandomClipAt(transform.position);
+
             LD58_Global.instance.data.Collect(type);
             roboAvatar.happiness = 1;
             roboAvatar.sadness = 0;
         }
         else
         {
+            sound2.PlayRandomClipAt(transform.position);
+
             LD58_Global.instance.data.Malus(type);
             roboAvatar.happiness = 0;
             roboAvatar.sadness = 1;

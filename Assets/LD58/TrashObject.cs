@@ -12,6 +12,9 @@ public class TrashObject : MonoBehaviour
 
     public enum Type { Can, Bottle, Tire }
     public Type type;
+
+    public SoundEffect grapSound;
+
     public RoboCursor currentGrabber { get; set; }
 
     public float ready { get; private set; }
@@ -22,6 +25,7 @@ public class TrashObject : MonoBehaviour
     {
         linearDamping = body.linearDamping;
     }
+
 
     void Update()
     {
