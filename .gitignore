@@ -11,3 +11,5 @@
 
 /Assets/Ignored from Git/*
 !/Assets/Ignored from Git/Place your personal testing stuff here
+
+/Assets/FR2_Cache.asset

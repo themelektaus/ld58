@@ -11,8 +11,6 @@ namespace Prototype
     {
         [SerializeField] GameObject prefab;
         [SerializeField] Object parent;
-        [SerializeField] Object context;
-        [SerializeField] string contextString;
 
         [SerializeField] UnityEvent onInstantiate;
         [SerializeField] bool delayOnDestroy;
@@ -29,12 +27,6 @@ namespace Prototype
         {
             return prefab.Instantiate(parent.GetTransform(), x =>
             {
-                if (context)
-                    x.GetOrAddComponent<ObjectContext>().@object = context;
-
-                if (!contextString.IsNullOrEmpty())
-                    x.GetOrAddComponent<StringContext>().@string = contextString;
-
                 onInstantiate.Invoke();
 
                 x.AddComponent<OnDestroy_>().AddListener(

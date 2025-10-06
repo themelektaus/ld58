@@ -11,6 +11,8 @@ namespace Prototype.LD58
     [CreateAssetMenu(menuName = "LD58: Global")]
     public class LD58_Global : UnityEngine.ScriptableObject
     {
+        [SerializeField] bool autoInitialize = true;
+
         [SerializeField] ObjectQuery gameStateMachineQuery;
         public static LD58_GameStateMachine gameStateMachine
             => instance.gameStateMachineQuery.FindComponent<LD58_GameStateMachine>();
@@ -94,7 +96,11 @@ namespace Prototype.LD58
         static void Init()
         {
             runtimeSingletons.Clear();
-            instance.Resume();
+
+            if (instance.autoInitialize)
+            {
+                instance.Resume();
+            }
         }
 
         public bool IsPaused()
@@ -136,6 +142,12 @@ namespace Prototype.LD58
         static void OnBeforeSceneLoad()
         {
             SceneManager.sceneLoaded -= SceneManager_SceneLoaded;
+
+            if (!instance.autoInitialize)
+            {
+                return;
+            }
+
             SceneManager.sceneLoaded += SceneManager_SceneLoaded;
 
             AddSingleton(

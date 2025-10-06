@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b743ebff9521134d921717d3d73af4c, type: 3}
   m_Name: LD58_Global
   m_EditorClassIdentifier: 
+  autoInitialize: 1
   gameStateMachineQuery: {fileID: 11400000, guid: 9253ee5f974db0549aa29a2e44142d74, type: 2}
   framerateQuery: {fileID: 11400000, guid: e9941f2de02da57428ff834cf0a58e6d, type: 2}
   mainCameraQuery: {fileID: 11400000, guid: c23e0220de8213742b73af416886b83b, type: 2}

@@ -15,7 +15,6 @@ namespace Prototype
         [SerializeField] Vector2 interval = Vector2.one;
 
         public Collider2D area;
-        [SerializeField] Object spawnContext;
 
         [System.Serializable]
         public struct Obstacle
@@ -109,9 +108,6 @@ namespace Prototype
             }
 
             budget--;
-
-            if (spawnContext)
-                gameObject.GetOrAddComponent<ObjectContext>().@object = spawnContext;
 
             if (@object.lifetime < 0)
             {

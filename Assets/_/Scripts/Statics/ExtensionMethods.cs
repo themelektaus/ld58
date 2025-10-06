@@ -91,9 +91,6 @@ namespace Prototype
         {
             GameObject gameObject;
 
-            if (@this.TryGetComponent<PoolObject>(out _))
-                gameObject = Pool.Instantiate(@this, options.parent);
-            else
                 gameObject = Object.Instantiate(@this, options.parent);
 
             bool activeSelf = @this.activeSelf;
@@ -202,12 +199,6 @@ namespace Prototype
 
         public static void Kill(this GameObject @this)
         {
-            if (@this.TryGetComponent<PoolObject>(out _))
-            {
-                Pool.Destroy(@this);
-                return;
-            }
-
             Object.Destroy(@this);
         }
 
@@ -458,14 +449,6 @@ namespace Prototype
             if (!@this)
                 return null;
 
-            if (@this is ObjectContext context)
-            {
-                if (context.@object is ObjectContext objectContext && context == objectContext)
-                    throw new("Context points to itself");
-
-                return context.@object.GetGameObject();
-            }
-
             if (@this is ObjectQuery objectQuery)
                 return objectQuery.FindGameObject();
 
@@ -482,14 +465,6 @@ namespace Prototype
         {
             if (!@this)
                 return null;
-
-            if (@this is ObjectContext context)
-            {
-                if (context.@object is ObjectContext context2 && context == context2)
-                    throw new("Context points to itself");
-
-                return context.@object.GetTransform();
-            }
 
             if (@this is ObjectQuery objectQuery)
                 return objectQuery.FindTransform();
@@ -513,14 +488,6 @@ namespace Prototype
 
             if (@this is T t)
                 return t;
-
-            if (@this is ObjectContext context)
-            {
-                if (context.@object is ObjectContext context2 && context == context2)
-                    throw new("Context points to itself");
-
-                return context.@object.GetComponent<T>();
-            }
 
             if (@this is ObjectQuery objectQuery)
                 return objectQuery.FindComponent<T>();
@@ -587,9 +554,6 @@ namespace Prototype
         {
             if (@object is ObjectQuery query)
                 return query.Match(other);
-
-            if (@object is ObjectContext context)
-                return context.@object == other;
 
             return @object == other;
         }
@@ -1005,11 +969,6 @@ namespace Prototype
             return path;
         }
 
-        public static T Load<T>(this Component @this, Action<T> onCreate = default) where T : DatabaseObject, new()
-        {
-            return Database.Load(@this.GetComponent<IUnique>(), onCreate);
-        }
-
 #if UNITY_EDITOR
         static readonly Texture2D[] labelBackgrounds = new Texture2D[9];
 
@@ -1157,11 +1116,6 @@ namespace Prototype
         public static bool IsNullOrEmpty(this string @this)
         {
             return @this is null || @this == string.Empty;
-        }
-
-        public static void AddDebugMessage(this GameObject @this, string message)
-        {
-            @this.GetOrAddComponent<Debugable>().AddDebugMessage(message);
         }
     }
 }
