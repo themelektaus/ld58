@@ -43,17 +43,3 @@ MonoBehaviour:
     description: 
     path: Assets/Prototype/Monitor
     requiresTransform: 0
-  - visible: 1
-    category: Prototype
-    subCategory: 
-    title: Play Scene
-    description: 
-    path: Assets/Prototype/Play Scene
-    requiresTransform: 0
-  - visible: 1
-    category: Prototype
-    subCategory: 
-    title: TD Lighting
-    description: 
-    path: Assets/Prototype/TD Lighting
-    requiresTransform: 0

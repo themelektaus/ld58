@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 261434cde81ee0b4796f44537610938c, type: 3}
+  m_Name: Ease
+  m_EditorClassIdentifier: 
+  min: 0
+  max: 1
+  points:
+  - position: {x: 0, y: 0}
+    tangent: {x: -0.1, y: 0, z: 0.5, w: 0}
+  - position: {x: 1, y: 1}
+    tangent: {x: -0.5, y: -0, z: 0.1, w: 0}
+  bezierPoints:
+  - {x: 0, y: 0}
+  - {x: 0.07493804, y: 0.008018662}
+  - {x: 0.14244057, y: 0.030908298}
+  - {x: 0.20338243, y: 0.06691937}
+  - {x: 0.25863826, y: 0.11430237}
+  - {x: 0.30908296, y: 0.17130777}
+  - {x: 0.35559118, y: 0.236186}
+  - {x: 0.39903772, y: 0.30718762}
+  - {x: 0.44029742, y: 0.38256305}
+  - {x: 0.480245, y: 0.46056283}
+  - {x: 0.51975507, y: 0.5394373}
+  - {x: 0.5597026, y: 0.61743695}
+  - {x: 0.6009622, y: 0.6928123}
+  - {x: 0.6444088, y: 0.763814}
+  - {x: 0.690917, y: 0.8286922}
+  - {x: 0.74136174, y: 0.88569766}
+  - {x: 0.7966176, y: 0.9330807}
+  - {x: 0.8575593, y: 0.96909165}
+  - {x: 0.92506194, y: 0.99198127}
+  - {x: 1, y: 1}
+  timeline:
+    events: []

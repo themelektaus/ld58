@@ -24,7 +24,7 @@ MonoBehaviour:
     gameStateMachine: {fileID: 6552470851627567931, guid: 06e30dbd6753cda439d56e04fee8e415, type: 3}
     framerate: {fileID: 8009155746848446687, guid: 6f8923da8fa870e48be9087179c057bc, type: 3}
     postProcessVolume: {fileID: 6144071437145000682, guid: 865eea82be0615e4bba270485a091f0e, type: 3}
-    gameMouseCursor: {fileID: 3362005355238678206, guid: 4d71e82226567e3499d3ffe0845b98b9, type: 3}
+    cursor: {fileID: 3362005355238678206, guid: 4d71e82226567e3499d3ffe0845b98b9, type: 3}
   easeCurve: {fileID: 11400000, guid: 826560d056d5f834cb0997fe8aa55264, type: 2}
   audioMixer: {fileID: 24100000, guid: b96a2486ae7a0ac45bfed864f6f108e0, type: 2}
   pause: 0

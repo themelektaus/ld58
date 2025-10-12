@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e61a999748d5dc942a06b1a721e572a9, type: 3}
+  m_Name: SFX - Knock (Collection)
+  m_EditorClassIdentifier: Assembly-CSharp::Prototype.SoundEffectCollection
+  defaultAudioMixerGroup: {fileID: 585082009552289682, guid: b96a2486ae7a0ac45bfed864f6f108e0, type: 2}
+  clips:
+  - {fileID: 8300000, guid: 522f3e03e03ecc44e95d9ef6a8920cc8, type: 3}
+  - {fileID: 8300000, guid: 99202a376733ceb4183b9bc408164faf, type: 3}
+  defaultVolume: 1
+  additionalGain: 0
+  maxPlayInterval: 0.1

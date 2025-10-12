@@ -1,23 +1,39 @@
 grafiken:
-teich/see mit umgebung, seerosen, schilf
-dosen
-flaschen
-schuhe
-autoreifen
-robo
-robohand ("cursor", veränderbar?)
-behälter fürn mist
-ui
+[x] teich/see mit umgebung, seerosen, schilf
+[x] dosen
+[x] flaschen
+[ ] schuhe
+[x] autoreifen
+[x] robo
+[x] robohand ("cursor", veränderbar?)
+[x] behälter fürn mist
+[x] ui
 
 upgrades:
-ufer (geht immer)
-müllinsel (masse)
-mitte am see (schwimmer)
-schilf ([zug]kraft)
-seerosen (geschicklichkeit)
+[ ] ufer (geht immer)
+[x] müllinsel (masse)
+[ ] mitte am see (schwimmer)
+[x] schilf ([zug]kraft)
+[ ] seerosen (geschicklichkeit)
 
 spielablauf:
-ein tag, see bereinigen
+[~] ein tag, see bereinigen
 
 spielende:
-ein tag, see BEREINIGT KOMPLETT (otter happy)
+[~] ein tag, see BEREINIGT KOMPLETT (otter happy)
+
+--
+
+todos:
+[x] Skills: Scriptable Objects
+[x] Game Reset direkt in der Szene anstatt in LD85_Global (Scriptable Object)
+[ ] Sprite Z Order
+[ ] Sprite Arm Line Renderer Z Order
+[ ] Dose Sound Lautstärke angleichen
+[x] LowPass Filter Musik wenn im Menü
+[ ] Post-Processing
+[x] Scripts in Namespace
+[~] Scripts umbenennen
+[ ] Upgrade Card Hover Effekt
+[~] Typewriter
+[~] Rework Sadness/Happiness

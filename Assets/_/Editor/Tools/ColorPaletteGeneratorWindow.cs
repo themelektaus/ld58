@@ -14,6 +14,8 @@ namespace Prototype.Editor
         [SerializeField] List<Texture2D> textures;
 
         ScrollView content;
+        SliderInt thresholdSlider;
+        Label thresholdLabel;
         Button generateButton;
         Button saveButton;
 
@@ -30,6 +32,16 @@ namespace Prototype.Editor
             var root = rootVisualElement;
             root.style.flexGrow = 1;
             root.style.SetPadding(2);
+
+            var top = new VisualElement { style = { flexShrink = 0, flexDirection = FlexDirection.Row, height = 20 } };
+            top.Add(thresholdSlider = new(0, 500, pageSize: 1) { style = { flexBasis = 1, flexGrow = 5 } });
+            top.Add(thresholdLabel = new("< 0.00 %") { style = { flexBasis = 1, flexGrow = 1 } });
+            root.Add(top);
+
+            thresholdSlider.RegisterValueChangedCallback(x =>
+            {
+                thresholdLabel.text = "< " + (x.newValue / 100f).ToString("0.00", System.Globalization.CultureInfo.InvariantCulture) + " %";
+            });
 
             content = new() { style = { flexGrow = 1 } };
             root.Add(content);
@@ -80,29 +92,83 @@ namespace Prototype.Editor
             var rollbackActions = new List<RollbackAction>();
 
             foreach (var texture in textures)
+            {
                 SetWriteable(in texture, in rollbackActions);
+            }
+
             AssetDatabase.Refresh();
 
-            var colorSet = new HashSet<Color>();
+            var colorSet = new Dictionary<Color, int>();
+
             foreach (var texture in textures)
-                UpdateColorPalette(in texture, ref colorSet);
+            {
+                UpdateColorPalette(in colorSet, in texture);
+            }
 
             foreach (var rollbackAction in rollbackActions)
+            {
                 rollbackAction.Invoke();
+            }
+
             AssetDatabase.Refresh();
 
-            var colors = colorSet.OrderBy(x => x.GetHue()).ToList();
+            var colors = colorSet
+                .OrderByDescending(x => x.Key.GetHue())
+                .ToList();
 
-            if (colorPalette)
-                DestroyImmediate(colorPalette);
+            var colorsTotal = colors.DefaultIfEmpty().Sum(x => x.Value);
 
-            colorPalette = new(colors.Count, 1, TextureFormat.ARGB32, false);
-            content.Clear();
             for (int i = 0; i < colors.Count; i++)
             {
-                colorPalette.SetPixel(i, 0, colors[i]);
-                content.Add(new ColorField() { value = colors[i] });
+                colors[i] = new(
+                    colors[i].Key,
+                    Mathf.RoundToInt((float) colors[i].Value / colorsTotal * 10000)
+                );
             }
+
+            colors.RemoveAll(x => x.Value < thresholdSlider.value);
+
+            if (colorPalette)
+            {
+                DestroyImmediate(colorPalette);
+            }
+
+            colorPalette = new(colors.Count, 1, TextureFormat.ARGB32, false);
+
+            content.Clear();
+
+            for (int i = 0; i < colors.Count; i++)
+            {
+                colorPalette.SetPixel(i, 0, colors[i].Key);
+
+                var row = new VisualElement
+                {
+                    style = {
+                        flexDirection = FlexDirection.Row
+                    }
+                };
+
+                row.Add(new ColorField
+                {
+                    value = colors[i].Key,
+                    style = {
+                        flexBasis = 1,
+                        flexGrow = 5
+                    }
+                });
+
+                row.Add(new Label
+                {
+                    text = (colors[i].Value / 100f).ToString("0.00", System.Globalization.CultureInfo.InvariantCulture) + " %",
+                    style = {
+                        flexBasis = 1,
+                        flexGrow = 1
+                    }
+                });
+
+                content.Add(row);
+            }
+
             colorPalette.Apply();
 
             Selection.objects = selectedObjects;
@@ -149,12 +215,24 @@ namespace Prototype.Editor
             });
         }
 
-        static void UpdateColorPalette(in Texture2D texture, ref HashSet<Color> colors)
+        static void UpdateColorPalette(in Dictionary<Color, int> colors, in Texture2D texture)
         {
-            var list = colors.ToList();
-            list.AddRange(texture.GetPixels());
-            colors = list.ToHashSet();
-            colors.RemoveWhere(x => x.a == 0);
+            foreach (var pixel in texture.GetPixels())
+            {
+                if (Mathf.Approximately(pixel.a, 0))
+                {
+                    continue;
+                }
+
+                if (colors.ContainsKey(pixel))
+                {
+                    colors[pixel]++;
+                }
+                else
+                {
+                    colors.Add(pixel, 1);
+                }
+            }
         }
     }
 }
