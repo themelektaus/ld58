@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7325549055163248958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4864949731366570840}
+  - component: {fileID: 7569731781139693055}
+  m_Layer: 0
+  m_Name: LD58 - Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4864949731366570840
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7325549055163248958}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7569731781139693055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7325549055163248958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7460bee0ab6deb041bf0b367cb682a87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  audioMixer: {fileID: 24100000, guid: b96a2486ae7a0ac45bfed864f6f108e0, type: 2}
+  onAwake: 1
+  onFinishTrack: 2
+  audioMixerGroup: {fileID: 821175815560446494, guid: b96a2486ae7a0ac45bfed864f6f108e0, type: 2}
+  fadeSpeed: 0.2
+  tracks:
+  - clip: {fileID: 8300000, guid: a1e463c2f14a91b4c9e7db12e914f8ee, type: 3}
+    volume: 0.65
+  - clip: {fileID: 8300000, guid: a9e3a2f0a63bf604e8d9be2822940f65, type: 3}
+    volume: 0.6
+  - clip: {fileID: 8300000, guid: acc279a24ed505a44a8d8c2f2b7e0506, type: 3}
+    volume: 0.65
+  - clip: {fileID: 8300000, guid: dc1b2299ba8de794fadd38a8d046482b, type: 3}
+    volume: 0.6
+  - clip: {fileID: 8300000, guid: 040d546e056320d478e6fdb25db0e5cf, type: 3}
+    volume: 0.65
+  - clip: {fileID: 8300000, guid: 7980f60cdf4fd044e988a9400ab598b8, type: 3}
+    volume: 0.65
+  - clip: {fileID: 8300000, guid: db78c801d9a5fba44a0cfb14ef0b1d79, type: 3}
+    volume: 0.7
+  - clip: {fileID: 8300000, guid: 79967499d1712fb40979aa1ad9b156cb, type: 3}
+    volume: 0.6
+  deadTrackInstances: []
+  shuffledTracks: []

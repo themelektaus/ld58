@@ -4,11 +4,6 @@ namespace Prototype.LD58
 {
     public class LD58_Cursor : MonoBehaviour
     {
-        void OnEnable()
-        {
-            Cursor.visible = false;
-        }
-
         void OnDisable()
         {
             Cursor.visible = true;
@@ -16,6 +11,7 @@ namespace Prototype.LD58
 
         void Update()
         {
+            Cursor.visible = false;
             var mainCamera = Utils.GetMainCamera(autoCreate: false);
             transform.position = (Vector2) mainCamera.ScreenToWorldPoint(Input.mousePosition);
         }

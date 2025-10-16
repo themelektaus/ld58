@@ -16,6 +16,6 @@ MonoBehaviour:
   clips:
   - {fileID: 8300000, guid: 0e21cab28d9485f4f8f287acfa893d56, type: 3}
   - {fileID: 8300000, guid: 507aa5ffb5614b749a4fb931207d0d1e, type: 3}
-  defaultVolume: 0.5
+  defaultVolume: 0.6
   additionalGain: 0
   maxPlayInterval: 0.1

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -5,9 +6,9 @@ namespace Prototype.LD58
 {
     public class LD58_Trash : MonoBehaviour
     {
-        public static int count { get; private set; }
+        public static HashSet<LD58_Trash> instances { get; } = new();
 
-        public ObjectQuery reedAreaQuery;
+        public List<Collider2D> reedAreas;
         public float reedMultiplicatorAdditive = 1;
 
         public Rigidbody2D body;
@@ -25,13 +26,23 @@ namespace Prototype.LD58
 
         void Awake()
         {
-            count++;
+            instances.Add(this);
             linearDamping = body.linearDamping;
+        }
+
+        void OnValidate()
+        {
+            if (reedAreas is null || reedAreas.Count == 0)
+            {
+                reedAreas = this.EnumerateSceneObjectsByType<Collider2D>()
+                    .Where(x => x.gameObject.name == "Reed Area")
+                    .ToList();
+            }
         }
 
         void OnDestroy()
         {
-            count--;
+            instances.Remove(this);
         }
 
         void Update()
@@ -40,7 +51,6 @@ namespace Prototype.LD58
 
             var dampingMultiplicator = 1f;
 
-            var reedAreas = reedAreaQuery.FindComponents<Collider2D>();
             var overlaps = Physics2D.OverlapPointAll(body.position);
 
             foreach (var reedArea in reedAreas)

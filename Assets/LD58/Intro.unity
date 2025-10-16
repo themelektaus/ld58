@@ -344,18 +344,6 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 553909073971894792, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963837206999651603, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963837206999651603, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
-      propertyPath: m_Pivot.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1963837206999651603, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -381,56 +369,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1963837206999651603, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963837206999651603, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963837206999651603, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963837206999651603, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963837206999651603, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963837206999651603, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963837206999651603, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963837206999651603, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963837206999651603, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963837206999651603, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963837206999651603, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1963837206999651603, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2889814209355289694, guid: 36b70e425dad3ec4b83dead93d4d53de, type: 3}
-      propertyPath: m_Name
-      value: Splashscreen
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

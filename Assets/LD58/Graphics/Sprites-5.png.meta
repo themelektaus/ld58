@@ -341,7 +341,7 @@ TextureImporter:
         width: 743
         height: 232
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 131, y: 0, z: 130, w: 0}
       customData: 
       outline: []
@@ -350,6 +350,94 @@ TextureImporter:
       bones: []
       spriteID: d5ed3881bc59d3f4c898db6e7ff1388f
       internalID: -2093514247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites-5_11
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1094
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28374bc8dd83aa24d87bccd344688251
+      internalID: -1584544806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites-5_12
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 717
+        width: 350
+        height: 350
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33a8d64755bc3394a97a7628508639b2
+      internalID: 293655749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites-5_13
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1676
+        width: 330
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 100, y: 100, z: 100, w: 100}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e150a51e28e31f84180b479db9f9d88b
+      internalID: -386887638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprites-5_14
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1676
+        width: 330
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 100, y: 100, z: 100, w: 100}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fc63e0c253926544b88c288ec1e9b8a
+      internalID: -1543135056
       vertices: []
       indices: 
       edges: []
@@ -371,6 +459,10 @@ TextureImporter:
       Sprites-5_0: -5452669578838151866
       Sprites-5_1: -710406743
       Sprites-5_10: -2093514247
+      Sprites-5_11: -1584544806
+      Sprites-5_12: 293655749
+      Sprites-5_13: -386887638
+      Sprites-5_14: -1543135056
       Sprites-5_2: 1293258154
       Sprites-5_3: 961521113
       Sprites-5_4: 869548221

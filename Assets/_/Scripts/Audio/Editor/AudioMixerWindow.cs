@@ -14,7 +14,7 @@ namespace Prototype.Editor
         [MenuItem("Tools/Audio Mixer")]
         static void Init()
         {
-            GetWindow<AudioMixerWindow>().titleContent = new("Audio Mixer");
+            GetWindow<AudioMixerWindow>().titleContent = new("Audio Mixer ");
         }
 
         AudioMixerGroup audioMixerGroup;

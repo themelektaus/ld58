@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ratio: {x: 16, y: 9}
+  preCulling: 1
 --- !u!20 &728356337662469334
 Camera:
   m_ObjectHideFlags: 0

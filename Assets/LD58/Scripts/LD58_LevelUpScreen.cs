@@ -15,8 +15,17 @@ namespace Prototype.LD58
         GameObject card1;
         GameObject card2;
 
+        float time;
+
+        void Update()
+        {
+            time -= Time.deltaTime;
+        }
+
         void OnEnable()
         {
+            time = .7f;
+
             var perks = new List<LD58_PlayerPerkInfo>();
 
             foreach (var perk in player.EnumeratePerks())
@@ -63,7 +72,7 @@ namespace Prototype.LD58
             {
                 x.onLeftClick.AddListener(() =>
                 {
-                    if (clicked)
+                    if (time > 0 || clicked)
                     {
                         return;
                     }
@@ -98,7 +107,7 @@ namespace Prototype.LD58
             {
                 x.onLeftClick.AddListener(() =>
                 {
-                    if (clicked)
+                    if (time > 0 || clicked)
                     {
                         return;
                     }

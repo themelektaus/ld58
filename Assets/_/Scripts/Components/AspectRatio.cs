@@ -7,6 +7,7 @@ namespace Prototype
     public class AspectRatio : MonoBehaviour
     {
         [SerializeField] Vector2 ratio = new(16, 9);
+        [SerializeField] bool preCulling;
 
         Camera _camera;
         Camera GetCamera() => _camera = _camera ? _camera : GetComponent<Camera>();
@@ -41,12 +42,15 @@ namespace Prototype
 
         void OnPreCull()
         {
-            var camera = GetCamera();
-            var cameraRect = camera.rect;
-            var fullRect = new Rect(0, 0, 1, 1);
-            camera.rect = fullRect;
-            GL.Clear(true, true, Color.black);
-            camera.rect = cameraRect;
+            if (preCulling)
+            {
+                var camera = GetCamera();
+                var cameraRect = camera.rect;
+                var fullRect = new Rect(0, 0, 1, 1);
+                camera.rect = fullRect;
+                GL.Clear(true, true, Color.black);
+                camera.rect = cameraRect;
+            }
         }
 
         void Update()

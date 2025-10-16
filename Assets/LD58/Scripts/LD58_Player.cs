@@ -10,19 +10,34 @@ namespace Prototype.LD58
 {
     public class LD58_Player : MonoBehaviour
     {
-        public static readonly Observable<PauseChangeMessage> onPauseChange = new();
-
-        public class PauseChangeMessage : Message
-        {
-            public bool isPaused;
-        }
-
         [SerializeField] GameObject welcomeScreen;
         [SerializeField] LD58_LevelUpScreen levelUpScreen;
         [SerializeField, ReadOnlyInPlayMode] ButtonUI nextLevelButton;
 
         [SerializeField] int pause;
-        [SerializeField] int maxTrash = 60;
+
+#if UNITY_EDITOR
+        [ContextMenuItem("Set Max Trash by Scene", nameof(SetMaxTrashByScene))]
+#endif
+        public int maxTrash = 60;
+
+#if UNITY_EDITOR
+        void SetMaxTrashByScene()
+        {
+            maxTrash = this.EnumerateSceneObjectsByType<LD58_Trash>().Count();
+            UnityEditor.EditorUtility.SetDirty(this);
+        }
+#endif
+
+#if UNITY_EDITOR
+        [ContextMenu("Win")]
+#endif
+        void Win()
+        {
+            LD58_Trash.instances.Clear();
+        }
+
+        [SerializeField] float time = 120;
 
         [SerializeField, ReadOnly] string nextLevel;
 
@@ -38,6 +53,15 @@ namespace Prototype.LD58
             public LD58_PlayerPerkInfo range;
             public LD58_PlayerPerkInfo speed;
             public LD58_PlayerPerkInfo strength;
+        }
+
+        public Points points;
+
+        [Serializable]
+        public class Points
+        {
+            public bool inTime = true;
+            public bool neverSad = true;
         }
 
         public IEnumerable<LD58_PlayerPerkInfo> EnumeratePerks()
@@ -63,6 +87,8 @@ namespace Prototype.LD58
 
         public List<Slot> inventory;
 
+        Sequence levelUpSequence;
+
         void Awake()
         {
             if (welcomeScreen)
@@ -70,15 +96,13 @@ namespace Prototype.LD58
                 welcomeScreen.SetActive(true);
             }
 
-            GetComponentInChildren<LD58_TrashMeter>().maxValue = maxTrash;
-
             foreach (var perk in EnumeratePerks())
             {
                 perk.ResetCurrentLevel();
             }
 
             var currentLevelScene = (LevelScene) gameObject.scene.name;
-            
+
             if (currentLevelScene.name is not null)
             {
                 var levelScenes = GetLevelScenes().ToList();
@@ -127,6 +151,20 @@ namespace Prototype.LD58
                 return;
             }
 
+            time -= Time.deltaTime;
+
+            points.inTime = time >= 0;
+
+            if (Input.GetMouseButton(0))
+            {
+                return;
+            }
+
+            if (levelUpSequence is not null)
+            {
+                return;
+            }
+
             var inventoryLevel = GetInventoryLevel();
 
             if (currentInventoryLevel >= inventoryLevel)
@@ -134,15 +172,25 @@ namespace Prototype.LD58
                 return;
             }
 
-            currentInventoryLevel++;
+            levelUpSequence = this
+                .Wait(.2f)
+                .Then(() =>
+                {
+                    if (!isPaused && LD58_Trash.instances.Count > 0 && LD58_Trash.instances.Count <= maxTrash)
+                    {
+                        currentInventoryLevel++;
+                        levelUpScreen.gameObject.SetActive(true);
+                    }
+                })
+                .WaitForFrame()
+                .Then(() => levelUpSequence = null);
 
-            levelUpScreen.gameObject.SetActive(true);
+            levelUpSequence.Start();
         }
 
         public void Retry()
         {
             var activeSceneName = SceneManager.GetActiveScene().name;
-            LD58_Global.GetSingletonInstance(x => x.gameStateMachine).Trigger("Switch Level");
             SceneSwitcher.GotoScene(activeSceneName, activeSceneName, 1);
         }
 
@@ -163,13 +211,11 @@ namespace Prototype.LD58
         public void Pause()
         {
             pause++;
-            onPauseChange.Notify(new() { isPaused = isPaused });
         }
 
         public void Resume()
         {
             pause--;
-            onPauseChange.Notify(new() { isPaused = isPaused });
         }
 
         Slot GetOrAddSlot(LD58_TrashInfo trashInfo)

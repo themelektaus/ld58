@@ -12,7 +12,7 @@ namespace Prototype.Editor
         public Vector2 valueRange = new(0, 1);
         public float defaultValue;
 
-        bool dragging;
+        (float t, float y)? draggingStart;
 
         public AudioMixerSliderGUI() : base()
         {
@@ -52,7 +52,7 @@ namespace Prototype.Editor
 
         Rect r => contentRect;
         float s => r.width / 12;
-        float h => r.height / 16;
+        float h => Mathf.Clamp(r.height / 16, 4, 12);
         Rect r_inner => new(0, h / 2 + 8, r.width - s * 2, r.height - h - 18);
         Rect r_slide => new(r.width / 2 - s / 2, r_inner.y, s, r_inner.height);
 
@@ -75,7 +75,7 @@ namespace Prototype.Editor
         {
             EditorGUI.DrawRect(r, new(0, 0, 0, .3f));
             EditorGUI.DrawRect(r_slide, new(0, 0, 0, .4f));
-            EditorGUI.DrawRect(r_button, new(1, 1, .6f, dragging ? .8f : .4f));
+            EditorGUI.DrawRect(r_button, new(1, 1, .6f, draggingStart.HasValue ? .8f : .4f));
         }
 
         void OnMouseDown(MouseDownEvent e)
@@ -83,22 +83,30 @@ namespace Prototype.Editor
             switch (e.button)
             {
                 case 0:
-                    dragging = true;
+                    draggingStart = (
+                        Mathf.InverseLerp(valueRange.x, valueRange.y, value),
+                        e.localMousePosition.y
+                    );
+                    MarkDirtyRepaint();
                     break;
 
                 case 1:
                     value = defaultValue;
+                    MarkDirtyRepaint();
                     break;
             }
         }
 
         void OnMouseMove(MouseMoveEvent e)
         {
-            if (!dragging)
+            if (!draggingStart.HasValue)
                 return;
 
-            var t = 1 - (e.localMousePosition.y - r_inner.y) / r_inner.height;
+            var t = draggingStart.Value.t;
+            var y = draggingStart.Value.y;
+            t += (y - e.localMousePosition.y) / (r_inner.height * Mathf.PI);
             value = Mathf.Lerp(valueRange.x, valueRange.y, t);
+            MarkDirtyRepaint();
         }
 
         void OnMouseUp(MouseUpEvent e)
@@ -106,7 +114,8 @@ namespace Prototype.Editor
             switch (e.button)
             {
                 case 0:
-                    dragging = false;
+                    draggingStart = null;
+                    MarkDirtyRepaint();
                     break;
             }
         }

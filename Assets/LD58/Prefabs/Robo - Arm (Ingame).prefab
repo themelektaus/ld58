@@ -109,7 +109,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 789826111
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: 1524483972, guid: 052ed587f12252348986f305f1e5f3a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -168,13 +168,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eafc4f9ac2f47249a847c1ea929757d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  player: {fileID: 0}
   roboAvatar: {fileID: 0}
   body: {fileID: 5207433570208914504}
-  grabPullDistance: 1
   sprite1: {fileID: 7138185895232952069}
   sprite2: {fileID: 6771829149476058074}
   arm: {fileID: 2920125604377435488}
   armStart: {fileID: 2252993029140850732}
+  minGrabbingDistance: 1.1
 --- !u!1 &3565930800165242033
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,7 +202,7 @@ Transform:
   m_GameObject: {fileID: 3565930800165242033}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -263,7 +264,7 @@ Transform:
   m_GameObject: {fileID: 5607831629560765980}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -18, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -376,7 +377,7 @@ LineRenderer:
     shadowBias: 0.5
     generateLightingData: 0
   m_MaskInteraction: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
 --- !u!114 &2920125604377435488
@@ -395,7 +396,6 @@ MonoBehaviour:
   endPoint: {fileID: 2252993029140850732}
   curveResolution: 10
   curveHeight: 4
-  controlPoint: {fileID: 0}
 --- !u!1 &6513707030172214271
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,7 +474,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 789826111
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 10
   m_Sprite: {fileID: -1983860369, guid: 052ed587f12252348986f305f1e5f3a8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

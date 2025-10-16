@@ -48,6 +48,22 @@ PrefabInstance:
       propertyPath: bodyCollider
       value: 
       objectReference: {fileID: 2424160778423648291}
+    - target: {fileID: 3617352058170616823, guid: 61e4f54939f7d014784a216d177dcd5c, type: 3}
+      propertyPath: m_Size.x
+      value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617352058170616823, guid: 61e4f54939f7d014784a216d177dcd5c, type: 3}
+      propertyPath: m_Size.y
+      value: 2.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3617352058170616823, guid: 61e4f54939f7d014784a216d177dcd5c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5366100029292249595, guid: 052ed587f12252348986f305f1e5f3a8, type: 3}
+    - target: {fileID: 3617352058170616823, guid: 61e4f54939f7d014784a216d177dcd5c, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5888779058096838555, guid: 61e4f54939f7d014784a216d177dcd5c, type: 3}
       propertyPath: m_Sprite
       value: 

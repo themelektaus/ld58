@@ -1,0 +1,16 @@
+{
+    "name": "TexturePainter",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ace028e2b63249641b614c64180c760e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

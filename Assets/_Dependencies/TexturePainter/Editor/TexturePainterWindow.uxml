@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="TexturePainterToolbar" src="project://database/Assets/TexturePainter/Editor/TexturePainterToolbar.uxml?fileID=9197481963319205126&amp;guid=81b11bce13a8e254987be3142f0bf4ed&amp;type=3#TexturePainterToolbar" />
+    <ui:Template name="TexturePainterConfigPanel" src="project://database/Assets/TexturePainter/Editor/TexturePainterConfigPanel.uxml?fileID=9197481963319205126&amp;guid=0bfb3c5747a9289468770bd7a1e0f3cb&amp;type=3#TexturePainterConfigPanel" />
+    <ui:Template name="TexturePainterPaintablePanel" src="project://database/Assets/TexturePainter/Editor/TexturePainterPaintablePanel.uxml?fileID=9197481963319205126&amp;guid=bb3602b9cb7df524daa5c392b882c0a6&amp;type=3#TexturePainterPaintablePanel" />
+    <ui:Instance template="TexturePainterToolbar" name="TexturePainterToolbar" style="flex-basis: 25px;" />
+    <ui:Instance template="TexturePainterConfigPanel" name="TexturePainterConfigPanel" style="flex-basis: 110px;" />
+    <ui:Instance template="TexturePainterPaintablePanel" name="TexturePainterPaintablePanel" style="flex-grow: 1; flex-basis: 0;" />
+</ui:UXML>

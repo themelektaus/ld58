@@ -29,10 +29,10 @@ todos:
 [x] Game Reset direkt in der Szene anstatt in LD85_Global (Scriptable Object)
 [ ] Sprite Z Order
 [ ] Sprite Arm Line Renderer Z Order
-[ ] Dose Sound Lautstärke angleichen
+[x] Dose Sound Lautstärke angleichen
 [x] LowPass Filter Musik wenn im Menü
 [ ] Post-Processing
-[x] Scripts in Namespace
+[~] Scripts in Namespace
 [~] Scripts umbenennen
 [ ] Upgrade Card Hover Effekt
 [~] Typewriter

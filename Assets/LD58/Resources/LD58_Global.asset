@@ -13,10 +13,6 @@ MonoBehaviour:
   m_Name: LD58_Global
   m_EditorClassIdentifier: 
   autoInitialize: 1
-  gameStateMachineQuery: {fileID: 11400000, guid: 9253ee5f974db0549aa29a2e44142d74, type: 2}
-  framerateQuery: {fileID: 11400000, guid: e9941f2de02da57428ff834cf0a58e6d, type: 2}
-  mainCameraQuery: {fileID: 11400000, guid: c23e0220de8213742b73af416886b83b, type: 2}
-  uiCameraQuery: {fileID: 11400000, guid: 66906a46bdd9c024cbeee11695ce5fa0, type: 2}
   singletons:
     mainCamera: {fileID: 728356337662469334, guid: 6fb4a0e12df1b354ea4ebc880c5b39f9, type: 3}
     uiCamera: {fileID: 9165556441548074591, guid: 72887f567b152ca4c8071598b9f69b14, type: 3}
@@ -24,55 +20,5 @@ MonoBehaviour:
     gameStateMachine: {fileID: 6552470851627567931, guid: 06e30dbd6753cda439d56e04fee8e415, type: 3}
     framerate: {fileID: 8009155746848446687, guid: 6f8923da8fa870e48be9087179c057bc, type: 3}
     postProcessVolume: {fileID: 6144071437145000682, guid: 865eea82be0615e4bba270485a091f0e, type: 3}
-    cursor: {fileID: 3362005355238678206, guid: 4d71e82226567e3499d3ffe0845b98b9, type: 3}
-  easeCurve: {fileID: 11400000, guid: 826560d056d5f834cb0997fe8aa55264, type: 2}
-  audioMixer: {fileID: 24100000, guid: b96a2486ae7a0ac45bfed864f6f108e0, type: 2}
-  pause: 0
-  data:
-    levelValues: 0000000003000000070000000f0000001b0000002b0000003a0000004e0000006400000096000000c80000002c01000090010000f401000058020000bc0200002003000084030000e8030000
-    collectCounters:
-    - type: 0
-      amount: 0
-      value: 1
-    - type: 1
-      amount: 0
-      value: 3
-    - type: 2
-      amount: 0
-      value: 10
-    malus: 0
-    upgrade:
-      speed:
-        current: 0
-        values:
-        - 10
-        - 18
-        - 26
-        - 34
-        - 42
-      radius:
-        current: 0
-        values:
-        - 1
-        - 2
-        - 3
-        - 4
-        - 5
-      mass:
-        current: 0
-        values:
-        - 0.25
-        - 0.5
-        - 1
-        - 2
-        - 4
-      maxObjects:
-        current: 0
-        values:
-        - 1
-        - 2
-        - 3
-        - 5
-        - 7
-        - 10
-        - 15
+    cursor: {fileID: 8920604802700407733, guid: 4d71e82226567e3499d3ffe0845b98b9, type: 3}
+    music: {fileID: 7569731781139693055, guid: 0a53416c4d8ed8942b0006142d9c3df7, type: 3}

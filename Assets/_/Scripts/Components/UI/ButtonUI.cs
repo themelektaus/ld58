@@ -99,7 +99,7 @@ namespace Prototype
 
             base.Update();
 
-            var hoverBoolValue = fakeSelected || isSelected || clickLayerWeight > 0;
+            var hoverBoolValue = !disabled && (fakeSelected || isSelected || clickLayerWeight > 0);
             if (this.hoverBoolValue != hoverBoolValue)
             {
                 this.hoverBoolValue = hoverBoolValue;

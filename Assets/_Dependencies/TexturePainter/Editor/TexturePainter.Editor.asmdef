@@ -1,0 +1,20 @@
+{
+    "name": "TexturePainter.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:d60799ab2a985554ea1a39cd38695018",
+        "GUID:4b33a4bd8feeb4647827602d7df420a7",
+        "GUID:ace028e2b63249641b614c64180c760e"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

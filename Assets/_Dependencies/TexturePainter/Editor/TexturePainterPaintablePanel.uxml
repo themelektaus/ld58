@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Foldout text="Paintable">
+        <ui:VisualElement name="Content" />
+    </ui:Foldout>
+    <ui:Button text="Register Paintable" display-tooltip-when-elided="true" name="RegisterPaintableButton" />
+    <ui:Button text="Create Texture&#x9;" display-tooltip-when-elided="true" name="CreateTextureButton" />
+    <ui:Button text="Unregister Paintable" display-tooltip-when-elided="true" name="UnregisterPaintableButton" />
+</ui:UXML>

@@ -24,6 +24,7 @@ namespace Prototype.LD58
             public Framerate framerate;
             public PostProcessVolume postProcessVolume;
             public LD58_Cursor cursor;
+            public LD58_Music music;
         }
 
         public readonly Settings settings = new();
@@ -133,6 +134,11 @@ namespace Prototype.LD58
                 () => FindObjectsByType<LD58_Cursor>(FindObjectsSortMode.None)
             );
 
+            AddSingleton(
+                instance.singletons.music,
+                () => FindObjectsByType<LD58_Music>(FindObjectsSortMode.None)
+            );
+
             foreach (var runtimeSingleton in runtimeSingletons)
             {
                 runtimeSingleton.Clear();
@@ -172,6 +178,11 @@ namespace Prototype.LD58
             var prefab = getPrefab(instance.singletons).GetGameObject();
             var runtimeSingleton = runtimeSingletons.FirstOrDefault(x => x.prefab == prefab);
             return ExtensionMethods.GetComponent<T>(runtimeSingleton.instance);
+        }
+
+        public static void DeleteSavegame()
+        {
+            LD58_Savegame.Get().Delete();
         }
     }
 }

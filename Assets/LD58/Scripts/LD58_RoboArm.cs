@@ -18,13 +18,17 @@ namespace Prototype.LD58
         [SerializeField] LD58_RoboArmCurve arm;
         [SerializeField] Transform armStart;
 
-        SmoothFloat armValue = new(-1, .2f);
+        [SerializeField] float minGrabbingDistance = 1;
+
+        readonly SmoothFloat armValue = new(-1, .2f);
 
         Camera mainCamera => Utils.GetMainCamera(autoCreate: false);
 
+        bool grabbing;
+
         public class ConnectedTrashObjects
         {
-            public LD58_Trash trashObject;
+            public LD58_Trash trash;
             public DistanceJoint2D joint;
         }
 
@@ -36,18 +40,23 @@ namespace Prototype.LD58
 
             if (player.isPaused)
             {
+                body.linearVelocity = default;
                 UpdateIdle();
                 return;
             }
 
+            var isMouseDown = Input.GetMouseButton(0);
+
             UpdateArmPosition();
 
-            if (Input.GetMouseButton(0))
+            if (isMouseDown)
             {
+                grabbing = true;
                 UpdateGrabbing(player.perks.range);
             }
             else
             {
+                grabbing = false;
                 UpdateIdle();
             }
         }
@@ -90,37 +99,37 @@ namespace Prototype.LD58
 
             var overlapObjects = Physics2D.OverlapCircleAll(body.position, radius);
 
-            var trashObjects = FindObjectsByType<LD58_Trash>(FindObjectsSortMode.None)
+            var objects = FindObjectsByType<LD58_Trash>(FindObjectsSortMode.None)
                 .Where(x => x.ready < -.2f)
-                .Where(x => !connectedTrashObjects.Any(y => y.trashObject == x))
-                .Where(x => overlapObjects.Contains(x.bodyCollider));
-
-            trashObjects = trashObjects.OrderBy(x => (x.body.position - body.position).sqrMagnitude);
-
-            foreach (var trashObject in trashObjects)
+                .Where(x => !connectedTrashObjects.Any(y => y.trash == x))
+                .Where(x => overlapObjects.Contains(x.bodyCollider))
+                .Select(x => (trash: x, distance: (x.body.position - body.position).magnitude))
+                .OrderBy(x => x.distance);
+            
+            foreach (var (trash, distance) in objects)
             {
                 if (connectedTrashObjects.Count > 0)
                 {
-                    var trashInfo = connectedTrashObjects.First().trashObject.trashInfo;
-                    if (trashObject.trashInfo != trashInfo)
+                    var trashInfo = connectedTrashObjects.First().trash.trashInfo;
+                    if (trash.trashInfo != trashInfo)
                     {
                         continue;
                     }
                 }
 
                 var joint = body.gameObject.AddComponent<DistanceJoint2D>();
-                joint.connectedBody = trashObject.body;
+                joint.connectedBody = trash.body;
                 joint.autoConfigureDistance = false;
-                joint.distance = 1;
+                joint.distance = Mathf.Max(minGrabbingDistance, distance / 2);
                 joint.maxDistanceOnly = true;
                 joint.connectedAnchor = new(0, .15f);
 
-                trashObject.currentGrabber = this;
-                trashObject.grapSound.PlayRandomClipAt(trashObject.body.position);
+                trash.currentGrabber = this;
+                trash.grapSound.PlayRandomClipAt(trash.body.position);
 
                 var connectedTrashObject = new ConnectedTrashObjects
                 {
-                    trashObject = trashObject,
+                    trash = trash,
                     joint = joint
                 };
 
@@ -137,12 +146,12 @@ namespace Prototype.LD58
         {
             foreach (var connectedTrashObject in connectedTrashObjects)
             {
-                if (connectedTrashObject.trashObject == trashObject)
+                if (connectedTrashObject.trash == trashObject)
                 {
                     connectedTrashObject.joint.Destroy();
                 }
             }
-            connectedTrashObjects.RemoveAll(x => x.trashObject == trashObject);
+            connectedTrashObjects.RemoveAll(x => x.trash == trashObject);
         }
 
         void FixedUpdate()
@@ -170,6 +179,11 @@ namespace Prototype.LD58
             else
             {
                 speed = player.perks.speed;
+
+                if (grabbing && connectedTrashObjects.Count == 0)
+                {
+                    speed /= 4;
+                }
             }
 
             var direction = targetPosition - currentPosition;

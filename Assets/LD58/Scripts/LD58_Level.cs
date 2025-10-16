@@ -20,6 +20,17 @@ public class LD58_Level : MonoBehaviour
         public List<GameObject> objects;
     }
 
+#if UNITY_EDITOR
+    void OnValidate()
+    {
+        if (!player)
+        {
+            player = this.EnumerateSceneObjectsByType<LD58_Player>().FirstOrDefault();
+            UnityEditor.EditorUtility.SetDirty(this);
+        }
+    }
+#endif
+
     void Update()
     {
         if (player.isPaused)
@@ -31,7 +42,7 @@ public class LD58_Level : MonoBehaviour
             return;
         }
 
-        if (LD58_Trash.count <= destroyOnTrashCountBelowThan)
+        if (LD58_Trash.instances.Count <= destroyOnTrashCountBelowThan)
         {
             gameObject.Destroy();
             return;

@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace Prototype.LD58
@@ -14,36 +16,57 @@ namespace Prototype.LD58
 
         [SerializeField] SimpleAnimation simpleAnimation;
 
+        readonly Queue<LD58_Trash> trashQueue = new();
+        readonly Timer trashCollectTimer = new();
+
+#if UNITY_EDITOR
         void OnValidate()
         {
             if (!player)
             {
-                player = FindAnyObjectByType<LD58_Player>();
+                player = this.EnumerateSceneObjectsByType<LD58_Player>().FirstOrDefault();
+                UnityEditor.EditorUtility.SetDirty(this);
             }
 
             if (!roboAvatar)
             {
-                roboAvatar = FindAnyObjectByType<LD58_RoboHead>();
+                roboAvatar = this.EnumerateSceneObjectsByType<LD58_RoboHead>().FirstOrDefault();
+                UnityEditor.EditorUtility.SetDirty(this);
             }
         }
+#endif
 
         void OnTriggerEnter2D(Collider2D collision)
         {
-            var trashObject = collision.GetComponentInParent<LD58_Trash>();
-            if (!trashObject)
+            var trash = collision.GetComponentInParent<LD58_Trash>();
+            if (trash && !trashQueue.Contains(trash))
             {
-                return;
+                trashQueue.Enqueue(trash);
             }
+        }
 
+        void Update()
+        {
+            if (trashCollectTimer.Update(.2f))
+            {
+                if (trashQueue.Count > 0)
+                {
+                    Collect(trashQueue.Dequeue());
+                }
+            }
+        }
+
+        void Collect(LD58_Trash trash)
+        {
             simpleAnimation.Stop();
             simpleAnimation.Play();
 
-            if (trashObject.currentGrabber)
+            if (trash.currentGrabber)
             {
-                trashObject.currentGrabber.DropTrashObject(trashObject);
+                trash.currentGrabber.DropTrashObject(trash);
             }
 
-            if (trashObject.trashInfo == trashInfo)
+            if (trash.trashInfo == trashInfo)
             {
                 sound1.PlayRandomClipAt(transform.position);
 
@@ -56,9 +79,11 @@ namespace Prototype.LD58
 
                 roboAvatar.happiness = 0;
                 roboAvatar.sadness = 1;
+
+                player.points.neverSad = false;
             }
 
-            trashObject.gameObject.Destroy();
+            trash.gameObject.Destroy();
         }
     }
 }

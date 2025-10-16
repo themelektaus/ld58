@@ -27,15 +27,21 @@ namespace Prototype
         {
 #if !ENABLE_IL2CPP
             if (!PlayerPrefs.HasKey(nameof(vSync)))
+            {
                 PlayerPrefs.SetInt(nameof(vSync), vSync ? 1 : 0);
+            }
 
             if (!PlayerPrefs.HasKey(nameof(fullscreen)))
+            {
                 PlayerPrefs.SetInt(nameof(fullscreen), fullscreen ? 1 : 0);
+            }
 #endif
             ResetHash();
 
             if (!enabled)
+            {
                 OnDisable();
+            }
         }
 
 #if UNITY_EDITOR
@@ -69,6 +75,7 @@ namespace Prototype
         void OnEnable()
         {
             ResetHash();
+
 #if !ENABLE_IL2CPP
             vSync = PlayerPrefs.GetInt(nameof(vSync)) != 0;
             fullscreen = PlayerPrefs.GetInt(nameof(fullscreen)) != 0;
@@ -82,6 +89,7 @@ namespace Prototype
             Application.targetFrameRate = -1;
             QualitySettings.vSyncCount = 0;
 #endif
+
             ResetHash();
         }
 
@@ -101,6 +109,7 @@ namespace Prototype
 
             Application.targetFrameRate = vSync ? -1 : targetFrameRate;
             QualitySettings.vSyncCount = vSync ? 1 : 0;
+            
             UpdateFullscreen();
         }
 
@@ -110,6 +119,7 @@ namespace Prototype
             if (fullscreen && Application.isPlaying)
             {
                 Assembly assembly;
+
                 try
                 {
                     assembly = Assembly.Load("FullscreenEditor");
@@ -118,6 +128,7 @@ namespace Prototype
                 {
                     assembly = null;
                 }
+
                 fullscreenEditorTypes = assembly?.GetTypes();
                 fullscreenEditorTypes?
                     .FirstOrDefault(x => x.Name == "MenuItems")?

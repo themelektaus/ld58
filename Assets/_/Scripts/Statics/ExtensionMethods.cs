@@ -1117,5 +1117,23 @@ namespace Prototype
         {
             return @this is null || @this == string.Empty;
         }
+
+        public static IEnumerable<T> EnumerateSceneObjectsByType<T>(this Object @object) where T : Object
+        {
+            var scene = @object.GetGameObject().scene;
+            return Object
+                .FindObjectsByType<T>(FindObjectsSortMode.None)
+                .Where(x => x.GetGameObject().scene == scene);
+        }
+
+        public static void Shuffle<T>(this IList<T> list)
+        {
+            var n = list.Count;
+            while (n-- > 1)
+            {
+                int k = UnityEngine.Random.Range(0, n + 1);
+                (list[n], list[k]) = (list[k], list[n]);
+            }
+        }
     }
 }

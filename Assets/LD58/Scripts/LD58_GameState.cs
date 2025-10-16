@@ -39,7 +39,6 @@ namespace Prototype.LD58
             }
             else
             {
-                //error
                 LD58_Global.GetSingletonInstance(x => x.gameStateMachine).Trigger(name);
             }
         }
